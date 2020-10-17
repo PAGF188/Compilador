@@ -25,7 +25,7 @@
 #define _CAST 308
 #define _WRITEFLN 309
 
-//Otros
+//Otros componentes léxicos
 #define _ID 400
 #define _STRING 401
 #define _CACARTER 402

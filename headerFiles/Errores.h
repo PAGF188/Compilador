@@ -12,9 +12,12 @@
  */
 
 /**
- * Nombre: imprimeError
- * Objetivo: imprimir el error correspondiente en función del código del mismo.
- * @param codigo, valor identificativo del error.
+ * @name imprimeError
+ * @objective: imprimir el error correspondiente en función del código del mismo.
+ * @param codigo, valor identificativo del error. Puede ser:
+ *                (*) 1 -> se ha pasado más de 1 argumento.
+ *                (*) 2 -> no se pudo acceder al archivo a compilar. 
+ *                (*) 3 -> no se pudo cerrar el archivo de compilación al acabar.
  */
 void imprimeError(int codigo);
 

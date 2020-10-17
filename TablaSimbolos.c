@@ -10,3 +10,6 @@
  *         o una palabra reservada. 
  *       - Devolver el componente léxico de cada elemento.
  */
+
+
+//Las definiciones de las funciones públicas se encuentran en el .h

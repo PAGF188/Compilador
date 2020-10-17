@@ -6,7 +6,7 @@
  * Objetivos:
  *       - Exportar las funciones del analizador léxico que necesitarán invocar
  *         el resto de partes del compilador.
- *       - Exportar el tipo de datos que se devuelve con la función
+ *       - Exportar el tipo de datos que encapsula componente léxico + lexema.
  */
 
 /**
@@ -19,9 +19,9 @@ typedef struct {
 }tipoLexico;
 
 /**
- * Nombre: siguienteComponente()
- * Objetivo: Obtiene el siguiente componente léxico del codigo a analizar y se lo
- *           devuelve junto con el lexema. 
+ * @name siguienteComponente()
+ * @objective: Obtiene el siguiente componente léxico del codigo a analizar y lo
+ *             devuelve junto con el lexema. 
  */
 tipoLexico siguienteComponente();
 

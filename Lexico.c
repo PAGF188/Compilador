@@ -13,25 +13,53 @@
  */
 
 #include <stdio.h>
+#include <ctype.h>
+#include <stdlib.h>
+#include <string.h>
 #include "./headerFiles/Lexico.h"
+#include "./headerFiles/SistemaEntrada.h"
+#include "./headerFiles/Definiciones.h"
 
-//Las definiciones de las funciones se encuentran en el .h
+//Las definiciones de las funciones públicas se encuentran en el .h
 
 tipoLexico siguienteComponente(){
-    tipoLexico prueba;
-    prueba.componenteLexico = 3;
-    prueba.lexema = "asd";
-    return(prueba);
 
-    while(!erro){
+    tipoLexico tl;
+    char cadena[30]; 
+    char c;
+    int estado=0;
+    int erro=1;
+    int i = 0;
+    
+    while(erro!=2){
+        c = siguienteChar();
+        cadena[i] = c;
         switch (estado)
         {
         case 0:
-            /* code */
+            if(isalpha(c) || c=='_')  //ID
+                estado = 1;
+            else if(isdigit(c))    //entero
+                estado = 2;
+            else if(c=='"')   //String
+                estado = 3;
+            else if(c==EOF){
+                tl.lexema = " ";
+                return(tl);
+            }
             break;
-        
+        case 1:
+            if(!isalpha(c) && c!='_'){
+                cadena[i] = ' ';
+                tl.componenteLexico = _ID;
+                tl.lexema = (char *) malloc(sizeof(cadena));
+                strcpy(tl.lexema,cadena);
+                return(tl);
+            }
+            break;
         default:
             break;
         }
+        i++;
     }
 }

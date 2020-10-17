@@ -12,15 +12,14 @@
 #include "./headerFiles/Sintactico.h"
 #include "./headerFiles/Lexico.h"
 
-//Las definiciones de las funciones se encuentran en el .h
+//Las definiciones de las funciones públicas se encuentran en el .h
 
 void sintactico(){
-    int i=0;
-    while(i<10){
-        //Pedimos el siguiente componenteLexico
+
+    tipoLexico l;
+    do{
         tipoLexico l = siguienteComponente();
-        //Imprimimos el resultado
         printf("[<%d>,'%s']\n",l.componenteLexico, l.lexema);
-        i++;
-    }
+    }while(l.lexema!=" ");
+
 }

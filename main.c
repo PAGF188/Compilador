@@ -11,10 +11,12 @@
 
 #include <stdio.h>
 #include <unistd.h>
+#include <stdlib.h>
 #include "./headerFiles/Errores.h"
 #include "./headerFiles/Sintactico.h"
+#include "./headerFiles/SistemaEntrada.h"
 
-int main(int argc, char const *argv[])
+int main(int argc, char *argv[])
 {
     //Comprobaciones correctos argumentos pasados por línea de comandos. 
     //En principio un único archivo vamos a compilar.
@@ -26,8 +28,15 @@ int main(int argc, char const *argv[])
 
     //Iniciamos la tabla de símbolos
 
+    //Iniciamos sistema de entrada. 
+    //Esto es necesario para pasarle la ruta al archivo que contiene el código fuente a compilar.
+    if(iniciaSistemaEntrada(argv[1])==-1){
+        exit(-1);
+    }
+
     //Invocamos al analizador sintáctico
     sintactico();
-
-    return 0;
+    
+    //Cerramos el archivo
+    return(finSistemaEntrada());
 }
