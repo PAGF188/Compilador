@@ -1,3 +1,6 @@
+#ifndef __LEXICO
+#define __LEXICO
+
 /**
  * Autor: Pablo García Fernández.
  * Archivo: Lexico.h
@@ -10,8 +13,7 @@
  */
 
 /**
- * Struct que encapsula el lexema junto con su componenteLexico
- * Es utilizado para pasarle esta información al sintáctico. 
+ * Dato que encapsula el lexema junto con su componenteLexico.
  */
 typedef struct {
     char* lexema;
@@ -25,3 +27,4 @@ typedef struct {
  */
 tipoLexico siguienteComponente();
 
+#endif	/* __LEXICO */
