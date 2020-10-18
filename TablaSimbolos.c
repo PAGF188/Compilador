@@ -58,6 +58,10 @@ unsigned es_miembro_clave(abb A, tipoclave cl);
 void buscar_nodo(abb A, tipoclave cl, tipoelem *nodo);
 //
 void destruir_arbol(abb *A);
+//
+void suprimir(abb *A, tipoelem E);
+//
+tipoelem _suprimir_min(abb *A);
 
 // BORRAR!!!!!! Función de comprobación. Imprime toda la tabla de símbolos. Recorrido inorden del árbol.
 void imprime_tabla(abb A){
@@ -195,6 +199,48 @@ void destruir_arbol(abb *A) {
 		destruir_arbol(&((*A)->der));
 		free(*A);
 		*A = NULL;
+	}
+}
+
+void suprimir(abb *A, tipoelem E) {
+    abb aux;
+    if(es_vacio(*A)){
+       return;
+    }
+    
+    tipoclave cl = _clave_elem(&E);
+    int comp = _comparar_clave_elem(cl, (*A)->info);
+    if(comp < 0){ 
+        suprimir(&(*A)->izq, E);
+    } else if (comp > 0){ 
+        suprimir(&(*A)->der, E);
+    } else if (es_vacio((*A)->izq) && es_vacio((*A)->der)) {
+        free(*A);
+        *A = NULL;
+    } else if (es_vacio((*A)->izq)) { 	// pero no es vacio derecha
+        aux = *A;
+        *A = (*A)->der;
+        free(aux);
+    } else if (es_vacio((*A)->der)) { 	//pero no es vacio izquierda
+        aux = *A;
+        *A = (*A)->izq;
+        free(aux);
+    } else { //ni derecha ni izquierda esta vacio
+        (*A)->info = _suprimir_min(&(*A)->der);
+    }
+}
+
+tipoelem _suprimir_min(abb *A) {
+    abb aux;
+    tipoelem ele;
+    if (es_vacio((*A)->izq)) {
+        ele = (*A)->info;
+        aux = *A;
+        *A = (*A)->der;
+        free(aux);
+        return ele;
+    } else {
+        return _suprimir_min(&(*A)->izq);
 	}
 }
 

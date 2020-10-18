@@ -60,7 +60,7 @@ int insertarPalabraReservada(tipoelem E);
  *             asociado al componente léxico de "lexema".
  *           2) Si el lexema es un identificador ya insertado previamente, devolver entero
  *             asociado al componente léxico de "lexema".
- *           3) Si el lexema no está insertado en la tabla, insertarlo y devolver entero
+ *           3) Si el lexema no está insertado en la tabla, insertarlo (como identificador) y devolver entero
  *             asociado al componente léxico de "lexema".
  * @param E, lexema (identificador o palabra reservada).
  * @return int. Devuelve el valor entero asociado al componente léxico de "lexema".
