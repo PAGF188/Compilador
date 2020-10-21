@@ -15,6 +15,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "TablaSimbolos.h"
+#include "Definiciones.h"
 
 //Nodo del árbol. Información y punteros a hijo derecho/izquierdo.
 struct celda {
@@ -54,13 +55,13 @@ void insertar(abb *A, tipoelem E);
 void info(abb A, tipoelem *E);
 // 1 si el nodo con lexema cl está ya en el árbol. 0 caso contrario
 unsigned es_miembro_clave(abb A, tipoclave cl);
-//
+// devuele en *nodo, el nodo cuya clave coincida con cl.
 void buscar_nodo(abb A, tipoclave cl, tipoelem *nodo);
-//
+// eliminar el arbol y limpia la memoria.
 void destruir_arbol(abb *A);
-//
+//Las dos siguientes permiten eliminar un nodo concreto del árbol.
+//Sin embargo, esn esta práctica no se usan. Quedan hechas por si se necesitan en la siguiente.
 void suprimir(abb *A, tipoelem E);
-//
 tipoelem _suprimir_min(abb *A);
 
 // BORRAR!!!!!! Función de comprobación. Imprime toda la tabla de símbolos. Recorrido inorden del árbol.
@@ -107,9 +108,9 @@ int insertarComponenteLexico(char* lexema){
         tipoelem aux;
         aux.esPalabraReservada=0;
         aux.lexema = lexema; 
-        aux.componenteLexico = global_ID;
-        global_ID++;
+        aux.componenteLexico = _ID;
         insertar(&tablaSimbolos,aux);
+        return(_ID);
     }
 }
 

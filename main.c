@@ -72,6 +72,18 @@ int main(int argc, char *argv[])
 
     destruirTablaSimbolos();
 
+    //Comprobaciones sistema de entrada
+    if(iniciaSistemaEntrada(argv[1])==-1){
+        exit(-1);
+    }
+
+    for(int i=0;i<10000;i++){
+        siguienteChar();
+    }
+    printf("\n\n");
+
+    return(finSistemaEntrada());
+
     /*
     //Iniciamos sistema de entrada. 
     //Esto es necesario para pasarle la ruta al archivo que contiene el código fuente a compilar.

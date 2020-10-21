@@ -37,4 +37,13 @@ int finSistemaEntrada();
  */ 
 char siguienteChar();
 
+/**
+ * 
+ */ 
+char * siguienteLexema();
+
+void devolverCaracter(int nposiciones);
+
+void cargarBloque(int bloque);
+
 #endif	/* __SE */
