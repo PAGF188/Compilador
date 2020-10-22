@@ -32,7 +32,7 @@ int finSistemaEntrada();
 
 /**
  * @name siguienteChar
- * @objective: leer/devolver el siguiente carácter del archivo y avanzar una posición.
+ * @objective: leer/devolver el siguiente carácter del archivo.
  * @return char, carácter leído. (EOF en caso de que sea el último) 
  */ 
 char siguienteChar();
@@ -44,6 +44,7 @@ char * siguienteLexema();
 
 void devolverCaracter(int nposiciones);
 
+//borrar está función
 void cargarBloque(int bloque);
 
 #endif	/* __SE */

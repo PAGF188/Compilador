@@ -18,13 +18,16 @@ void imprimeError(int codigo){
     switch (codigo)
     {
     case 1:
-        printf("Argument error! : Solo puedes pasar un archivo para compilar.\n\n");
+        printf("\n\nArgument error! : Solo puedes pasar un archivo para compilar.\n\n");
         break;
     case 2: 
-        printf("Entry System error! : El archivo no es accesible.\n\n");
+        printf("\n\nEntry System error! : El archivo no es accesible.\n\n");
         break;
     case 3:
-        printf("Entry System error! : El archivo no se pudo cerrar.\n\n");
+        printf("\n\nEntry System error! : El archivo no se pudo cerrar.\n\n");
+        break;
+    case 4:
+        printf("\n\nLexical Error! : El tamaño del lexema excede al máximo permitido.\n\n");
         break;
     default:
         break;

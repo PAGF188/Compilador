@@ -82,11 +82,32 @@ int main(int argc, char *argv[])
         cargarBloque(1);
     }*/
 
-    char c;
+    /*char c;
     do{
         c=siguienteChar();
     }while(c!=EOF);
-    printf("\n\n");
+    printf("\n\n");*/
+
+    /*for(int i=0;i<3;i++){
+        printf("%c",siguienteChar());
+
+    }
+    printf("\nLexema: %s\n\n", siguienteLexema());
+
+    for(int i=0;i<3;i++){
+        printf("%c",siguienteChar());
+    }
+    printf("\nLexema: %s\n\n", siguienteLexema());*/
+    
+    for(int i=0;i<63;i++){
+        printf("%c",siguienteChar());
+
+    }
+    printf("\nLexema: %s\n\n", siguienteLexema());
+
+    //printf("%s\n", siguienteLexema());
+
+
 
     return(finSistemaEntrada());
 

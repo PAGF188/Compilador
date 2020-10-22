@@ -18,6 +18,7 @@
  *                (*) 1 -> se ha pasado más de 1 argumento.
  *                (*) 2 -> no se pudo acceder al archivo a compilar. 
  *                (*) 3 -> no se pudo cerrar el archivo de compilación al acabar.
+ *                (*) 4 -> tamaño de lexema superior al máximo permitido.
  */
 void imprimeError(int codigo);
 

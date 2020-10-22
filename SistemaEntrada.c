@@ -3,16 +3,21 @@
  * Archivo: SistemaEntrada.c
  * Versión: 1.0
  * Descripción: Implementa el sistema de entrada del compilador.
- * Funciones:
- *       - 
+ * Objetivos:
+ *       - Devolver el siguiente caracter.
+ *       - Devolver el siguiente lexema.
  */
+
+//Nota: No exactamente método del doble centinela. No se incluye EOF, 
+//pero aún así solo se realiza una única comparación.
 
 #include <stdio.h>
 #include <stdlib.h>
 #include "./headerFiles/SistemaEntrada.h"
 #include "./headerFiles/Errores.h"
 
-//Nota: Cambiar también lo del fscanf
+//Nota: Cambiar también el nº de char leídos por fscanf!!!!!!!
+//Nota2: Si fin supera a inicio al pedir caracteres->error tama lexema demasiado grande
 #define MAX 32
 
 //Variables globales.
@@ -72,50 +77,54 @@ int iniciaSistemaEntrada(char* archivo){
 }
 
 char siguienteChar(){
+    char c;
     //estamos en bloque 2
     if(fin>=MAX){
-        char c = bloque2[fin-MAX];
-        printf("Char devuelto posicion %ld: %c \n",fin, c);
+        c = bloque2[fin-MAX];
         if(fin==2*MAX-1){
             cargarBloque(1);
             fin=0;
-        }
-        else{
+        }else{
             fin++;
         }
-        return(c);
     }
     //estamos en bloque 1
     else{
-        char c = bloque1[fin];
-        printf("Char devuelto posicion %ld: %c \n",fin, c);
+        c = bloque1[fin];
         if(fin==MAX-1){
             cargarBloque(2);
             fin=MAX;
         }else{
             fin++;
         }
-        return(c);
     }
+    //Una vez incrementado fin, nunca debería coincidir con inicio
+    if(fin==inicio){
+        imprimeError(4);
+        exit(-1);
+    }
+    return(c);
 }
 
 char * siguienteLexema(){
     if(fin!=inicio){
         char * lexema;
-        lexema = (char *) malloc(fin-inicio);
+        int tam = fin-inicio;
+        if(tam<0)
+            tam = -tam;
+        lexema = (char *) malloc(tam+1);
         int i=0;
         while (inicio!=fin){
             if(inicio>=MAX){
-                lexema[i] = bloque2[inicio];
-                bloque2[inicio] = '\0';
+                lexema[i] = bloque2[inicio-MAX];
             }
             else{
                 lexema[i] = bloque1[inicio];
-                bloque1[inicio] = '\0';
             }
             i++;
-            inicio=(inicio+1)%MAX*2;
+            inicio=(inicio+1)%(MAX*2);
         }
+        lexema[tam] = '\0';
         return(lexema);
     }else{
         return(NULL);
@@ -147,22 +156,14 @@ void cargarBloque(int bloque){
         if(bloque==1){
             limpiar(1);
             //Leemos MAX-1 caracteres
-            int a = fscanf(ptr, "%32c", bloque1);
-            printf("%d",a);
+            fscanf(ptr, "%32c", bloque1);
             //fgets(bloque1, MAX, ptr);
-            printf("Cargado Bloque1: ");
-            imprimeBloque(1);
-            printf("\n");
         }
         else{
             limpiar(2);
             //Leemos MAX-1 caracteres
-            int a = fscanf(ptr, "%32c", bloque2);
-            printf("%d",a);
+            fscanf(ptr, "%32c", bloque2);
             //fgets(bloque2, MAX, ptr);
-            printf("Cargado Bloque2: ");
-            imprimeBloque(2);
-            printf("\n");
         }
     }
 }
