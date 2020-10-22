@@ -1,0 +1,1504 @@
+
+
+
+
+
+
+
+
+asd, 400
+b1, 400
+b2, 400
+cast, 308
+double, 301
+foreach, 304
+import, 300
+int, 302
+main, 307
+return, 305
+void, 306
+while, 303
+writefln, 309
+
+
+1Cargado Bloque1: import std.stdio;
+import std.alg
+Char devuelto posicion 0: i 
+Char devuelto posicion 1: m 
+Char devuelto posicion 2: p 
+Char devuelto posicion 3: o 
+Char devuelto posicion 4: r 
+Char devuelto posicion 5: t 
+Char devuelto posicion 6:   
+Char devuelto posicion 7: s 
+Char devuelto posicion 8: t 
+Char devuelto posicion 9: d 
+Char devuelto posicion 10: . 
+Char devuelto posicion 11: s 
+Char devuelto posicion 12: t 
+Char devuelto posicion 13: d 
+Char devuelto posicion 14: i 
+Char devuelto posicion 15: o 
+Char devuelto posicion 16: ; 
+Char devuelto posicion 17: 
+ 
+Char devuelto posicion 18: i 
+Char devuelto posicion 19: m 
+Char devuelto posicion 20: p 
+Char devuelto posicion 21: o 
+Char devuelto posicion 22: r 
+Char devuelto posicion 23: t 
+Char devuelto posicion 24:   
+Char devuelto posicion 25: s 
+Char devuelto posicion 26: t 
+Char devuelto posicion 27: d 
+Char devuelto posicion 28: . 
+Char devuelto posicion 29: a 
+Char devuelto posicion 30: l 
+Char devuelto posicion 31: g 
+1Cargado Bloque2: orithm.iteration;
+import std.exc
+Char devuelto posicion 32: o 
+Char devuelto posicion 33: r 
+Char devuelto posicion 34: i 
+Char devuelto posicion 35: t 
+Char devuelto posicion 36: h 
+Char devuelto posicion 37: m 
+Char devuelto posicion 38: . 
+Char devuelto posicion 39: i 
+Char devuelto posicion 40: t 
+Char devuelto posicion 41: e 
+Char devuelto posicion 42: r 
+Char devuelto posicion 43: a 
+Char devuelto posicion 44: t 
+Char devuelto posicion 45: i 
+Char devuelto posicion 46: o 
+Char devuelto posicion 47: n 
+Char devuelto posicion 48: ; 
+Char devuelto posicion 49: 
+ 
+Char devuelto posicion 50: i 
+Char devuelto posicion 51: m 
+Char devuelto posicion 52: p 
+Char devuelto posicion 53: o 
+Char devuelto posicion 54: r 
+Char devuelto posicion 55: t 
+Char devuelto posicion 56:   
+Char devuelto posicion 57: s 
+Char devuelto posicion 58: t 
+Char devuelto posicion 59: d 
+Char devuelto posicion 60: . 
+Char devuelto posicion 61: e 
+Char devuelto posicion 62: x 
+Char devuelto posicion 63: c 
+1Cargado Bloque1: eption;
+
+
+double beta1(double[] 
+Char devuelto posicion 0: e 
+Char devuelto posicion 1: p 
+Char devuelto posicion 2: t 
+Char devuelto posicion 3: i 
+Char devuelto posicion 4: o 
+Char devuelto posicion 5: n 
+Char devuelto posicion 6: ; 
+Char devuelto posicion 7: 
+ 
+Char devuelto posicion 8: 
+ 
+Char devuelto posicion 9: 
+ 
+Char devuelto posicion 10: d 
+Char devuelto posicion 11: o 
+Char devuelto posicion 12: u 
+Char devuelto posicion 13: b 
+Char devuelto posicion 14: l 
+Char devuelto posicion 15: e 
+Char devuelto posicion 16:   
+Char devuelto posicion 17: b 
+Char devuelto posicion 18: e 
+Char devuelto posicion 19: t 
+Char devuelto posicion 20: a 
+Char devuelto posicion 21: 1 
+Char devuelto posicion 22: ( 
+Char devuelto posicion 23: d 
+Char devuelto posicion 24: o 
+Char devuelto posicion 25: u 
+Char devuelto posicion 26: b 
+Char devuelto posicion 27: l 
+Char devuelto posicion 28: e 
+Char devuelto posicion 29: [ 
+Char devuelto posicion 30: ] 
+Char devuelto posicion 31:   
+1Cargado Bloque2: x, double[] y, double x_bar, dou
+Char devuelto posicion 32: x 
+Char devuelto posicion 33: , 
+Char devuelto posicion 34:   
+Char devuelto posicion 35: d 
+Char devuelto posicion 36: o 
+Char devuelto posicion 37: u 
+Char devuelto posicion 38: b 
+Char devuelto posicion 39: l 
+Char devuelto posicion 40: e 
+Char devuelto posicion 41: [ 
+Char devuelto posicion 42: ] 
+Char devuelto posicion 43:   
+Char devuelto posicion 44: y 
+Char devuelto posicion 45: , 
+Char devuelto posicion 46:   
+Char devuelto posicion 47: d 
+Char devuelto posicion 48: o 
+Char devuelto posicion 49: u 
+Char devuelto posicion 50: b 
+Char devuelto posicion 51: l 
+Char devuelto posicion 52: e 
+Char devuelto posicion 53:   
+Char devuelto posicion 54: x 
+Char devuelto posicion 55: _ 
+Char devuelto posicion 56: b 
+Char devuelto posicion 57: a 
+Char devuelto posicion 58: r 
+Char devuelto posicion 59: , 
+Char devuelto posicion 60:   
+Char devuelto posicion 61: d 
+Char devuelto posicion 62: o 
+Char devuelto posicion 63: u 
+1Cargado Bloque1: ble y_bar)
+{
+    /**
+        Cal
+Char devuelto posicion 0: b 
+Char devuelto posicion 1: l 
+Char devuelto posicion 2: e 
+Char devuelto posicion 3:   
+Char devuelto posicion 4: y 
+Char devuelto posicion 5: _ 
+Char devuelto posicion 6: b 
+Char devuelto posicion 7: a 
+Char devuelto posicion 8: r 
+Char devuelto posicion 9: ) 
+Char devuelto posicion 10: 
+ 
+Char devuelto posicion 11: { 
+Char devuelto posicion 12: 
+ 
+Char devuelto posicion 13:   
+Char devuelto posicion 14:   
+Char devuelto posicion 15:   
+Char devuelto posicion 16:   
+Char devuelto posicion 17: / 
+Char devuelto posicion 18: * 
+Char devuelto posicion 19: * 
+Char devuelto posicion 20: 
+ 
+Char devuelto posicion 21:   
+Char devuelto posicion 22:   
+Char devuelto posicion 23:   
+Char devuelto posicion 24:   
+Char devuelto posicion 25:   
+Char devuelto posicion 26:   
+Char devuelto posicion 27:   
+Char devuelto posicion 28:   
+Char devuelto posicion 29: C 
+Char devuelto posicion 30: a 
+Char devuelto posicion 31: l 
+1Cargado Bloque2: culates the slope parameter for 
+Char devuelto posicion 32: c 
+Char devuelto posicion 33: u 
+Char devuelto posicion 34: l 
+Char devuelto posicion 35: a 
+Char devuelto posicion 36: t 
+Char devuelto posicion 37: e 
+Char devuelto posicion 38: s 
+Char devuelto posicion 39:   
+Char devuelto posicion 40: t 
+Char devuelto posicion 41: h 
+Char devuelto posicion 42: e 
+Char devuelto posicion 43:   
+Char devuelto posicion 44: s 
+Char devuelto posicion 45: l 
+Char devuelto posicion 46: o 
+Char devuelto posicion 47: p 
+Char devuelto posicion 48: e 
+Char devuelto posicion 49:   
+Char devuelto posicion 50: p 
+Char devuelto posicion 51: a 
+Char devuelto posicion 52: r 
+Char devuelto posicion 53: a 
+Char devuelto posicion 54: m 
+Char devuelto posicion 55: e 
+Char devuelto posicion 56: t 
+Char devuelto posicion 57: e 
+Char devuelto posicion 58: r 
+Char devuelto posicion 59:   
+Char devuelto posicion 60: f 
+Char devuelto posicion 61: o 
+Char devuelto posicion 62: r 
+Char devuelto posicion 63:   
+1Cargado Bloque1: the linear regression of 'y' wrt
+Char devuelto posicion 0: t 
+Char devuelto posicion 1: h 
+Char devuelto posicion 2: e 
+Char devuelto posicion 3:   
+Char devuelto posicion 4: l 
+Char devuelto posicion 5: i 
+Char devuelto posicion 6: n 
+Char devuelto posicion 7: e 
+Char devuelto posicion 8: a 
+Char devuelto posicion 9: r 
+Char devuelto posicion 10:   
+Char devuelto posicion 11: r 
+Char devuelto posicion 12: e 
+Char devuelto posicion 13: g 
+Char devuelto posicion 14: r 
+Char devuelto posicion 15: e 
+Char devuelto posicion 16: s 
+Char devuelto posicion 17: s 
+Char devuelto posicion 18: i 
+Char devuelto posicion 19: o 
+Char devuelto posicion 20: n 
+Char devuelto posicion 21:   
+Char devuelto posicion 22: o 
+Char devuelto posicion 23: f 
+Char devuelto posicion 24:   
+Char devuelto posicion 25: ' 
+Char devuelto posicion 26: y 
+Char devuelto posicion 27: ' 
+Char devuelto posicion 28:   
+Char devuelto posicion 29: w 
+Char devuelto posicion 30: r 
+Char devuelto posicion 31: t 
+1Cargado Bloque2:  'x'
+    */
+    enforce(x.length
+Char devuelto posicion 32:   
+Char devuelto posicion 33: ' 
+Char devuelto posicion 34: x 
+Char devuelto posicion 35: ' 
+Char devuelto posicion 36: 
+ 
+Char devuelto posicion 37:   
+Char devuelto posicion 38:   
+Char devuelto posicion 39:   
+Char devuelto posicion 40:   
+Char devuelto posicion 41: * 
+Char devuelto posicion 42: / 
+Char devuelto posicion 43: 
+ 
+Char devuelto posicion 44:   
+Char devuelto posicion 45:   
+Char devuelto posicion 46:   
+Char devuelto posicion 47:   
+Char devuelto posicion 48: e 
+Char devuelto posicion 49: n 
+Char devuelto posicion 50: f 
+Char devuelto posicion 51: o 
+Char devuelto posicion 52: r 
+Char devuelto posicion 53: c 
+Char devuelto posicion 54: e 
+Char devuelto posicion 55: ( 
+Char devuelto posicion 56: x 
+Char devuelto posicion 57: . 
+Char devuelto posicion 58: l 
+Char devuelto posicion 59: e 
+Char devuelto posicion 60: n 
+Char devuelto posicion 61: g 
+Char devuelto posicion 62: t 
+Char devuelto posicion 63: h 
+1Cargado Bloque1: ==y.length, "x and y should be t
+Char devuelto posicion 0: = 
+Char devuelto posicion 1: = 
+Char devuelto posicion 2: y 
+Char devuelto posicion 3: . 
+Char devuelto posicion 4: l 
+Char devuelto posicion 5: e 
+Char devuelto posicion 6: n 
+Char devuelto posicion 7: g 
+Char devuelto posicion 8: t 
+Char devuelto posicion 9: h 
+Char devuelto posicion 10: , 
+Char devuelto posicion 11:   
+Char devuelto posicion 12: " 
+Char devuelto posicion 13: x 
+Char devuelto posicion 14:   
+Char devuelto posicion 15: a 
+Char devuelto posicion 16: n 
+Char devuelto posicion 17: d 
+Char devuelto posicion 18:   
+Char devuelto posicion 19: y 
+Char devuelto posicion 20:   
+Char devuelto posicion 21: s 
+Char devuelto posicion 22: h 
+Char devuelto posicion 23: o 
+Char devuelto posicion 24: u 
+Char devuelto posicion 25: l 
+Char devuelto posicion 26: d 
+Char devuelto posicion 27:   
+Char devuelto posicion 28: b 
+Char devuelto posicion 29: e 
+Char devuelto posicion 30:   
+Char devuelto posicion 31: t 
+1Cargado Bloque2: he same length!");
+    double nu
+Char devuelto posicion 32: h 
+Char devuelto posicion 33: e 
+Char devuelto posicion 34:   
+Char devuelto posicion 35: s 
+Char devuelto posicion 36: a 
+Char devuelto posicion 37: m 
+Char devuelto posicion 38: e 
+Char devuelto posicion 39:   
+Char devuelto posicion 40: l 
+Char devuelto posicion 41: e 
+Char devuelto posicion 42: n 
+Char devuelto posicion 43: g 
+Char devuelto posicion 44: t 
+Char devuelto posicion 45: h 
+Char devuelto posicion 46: ! 
+Char devuelto posicion 47: " 
+Char devuelto posicion 48: ) 
+Char devuelto posicion 49: ; 
+Char devuelto posicion 50: 
+ 
+Char devuelto posicion 51:   
+Char devuelto posicion 52:   
+Char devuelto posicion 53:   
+Char devuelto posicion 54:   
+Char devuelto posicion 55: d 
+Char devuelto posicion 56: o 
+Char devuelto posicion 57: u 
+Char devuelto posicion 58: b 
+Char devuelto posicion 59: l 
+Char devuelto posicion 60: e 
+Char devuelto posicion 61:   
+Char devuelto posicion 62: n 
+Char devuelto posicion 63: u 
+1Cargado Bloque1: m=0, denom=0;
+    int whilectr =
+Char devuelto posicion 0: m 
+Char devuelto posicion 1: = 
+Char devuelto posicion 2: 0 
+Char devuelto posicion 3: , 
+Char devuelto posicion 4:   
+Char devuelto posicion 5: d 
+Char devuelto posicion 6: e 
+Char devuelto posicion 7: n 
+Char devuelto posicion 8: o 
+Char devuelto posicion 9: m 
+Char devuelto posicion 10: = 
+Char devuelto posicion 11: 0 
+Char devuelto posicion 12: ; 
+Char devuelto posicion 13: 
+ 
+Char devuelto posicion 14:   
+Char devuelto posicion 15:   
+Char devuelto posicion 16:   
+Char devuelto posicion 17:   
+Char devuelto posicion 18: i 
+Char devuelto posicion 19: n 
+Char devuelto posicion 20: t 
+Char devuelto posicion 21:   
+Char devuelto posicion 22: w 
+Char devuelto posicion 23: h 
+Char devuelto posicion 24: i 
+Char devuelto posicion 25: l 
+Char devuelto posicion 26: e 
+Char devuelto posicion 27: c 
+Char devuelto posicion 28: t 
+Char devuelto posicion 29: r 
+Char devuelto posicion 30:   
+Char devuelto posicion 31: = 
+1Cargado Bloque2:  0;
+    while (whilectr < x.leng
+Char devuelto posicion 32:   
+Char devuelto posicion 33: 0 
+Char devuelto posicion 34: ; 
+Char devuelto posicion 35: 
+ 
+Char devuelto posicion 36:   
+Char devuelto posicion 37:   
+Char devuelto posicion 38:   
+Char devuelto posicion 39:   
+Char devuelto posicion 40: w 
+Char devuelto posicion 41: h 
+Char devuelto posicion 42: i 
+Char devuelto posicion 43: l 
+Char devuelto posicion 44: e 
+Char devuelto posicion 45:   
+Char devuelto posicion 46: ( 
+Char devuelto posicion 47: w 
+Char devuelto posicion 48: h 
+Char devuelto posicion 49: i 
+Char devuelto posicion 50: l 
+Char devuelto posicion 51: e 
+Char devuelto posicion 52: c 
+Char devuelto posicion 53: t 
+Char devuelto posicion 54: r 
+Char devuelto posicion 55:   
+Char devuelto posicion 56: < 
+Char devuelto posicion 57:   
+Char devuelto posicion 58: x 
+Char devuelto posicion 59: . 
+Char devuelto posicion 60: l 
+Char devuelto posicion 61: e 
+Char devuelto posicion 62: n 
+Char devuelto posicion 63: g 
+1Cargado Bloque1: th)
+    {
+        num += (x[whil
+Char devuelto posicion 0: t 
+Char devuelto posicion 1: h 
+Char devuelto posicion 2: ) 
+Char devuelto posicion 3: 
+ 
+Char devuelto posicion 4:   
+Char devuelto posicion 5:   
+Char devuelto posicion 6:   
+Char devuelto posicion 7:   
+Char devuelto posicion 8: { 
+Char devuelto posicion 9: 
+ 
+Char devuelto posicion 10:   
+Char devuelto posicion 11:   
+Char devuelto posicion 12:   
+Char devuelto posicion 13:   
+Char devuelto posicion 14:   
+Char devuelto posicion 15:   
+Char devuelto posicion 16:   
+Char devuelto posicion 17:   
+Char devuelto posicion 18: n 
+Char devuelto posicion 19: u 
+Char devuelto posicion 20: m 
+Char devuelto posicion 21:   
+Char devuelto posicion 22: + 
+Char devuelto posicion 23: = 
+Char devuelto posicion 24:   
+Char devuelto posicion 25: ( 
+Char devuelto posicion 26: x 
+Char devuelto posicion 27: [ 
+Char devuelto posicion 28: w 
+Char devuelto posicion 29: h 
+Char devuelto posicion 30: i 
+Char devuelto posicion 31: l 
+1Cargado Bloque2: ectr] - x_bar) * (y[whilectr] - 
+Char devuelto posicion 32: e 
+Char devuelto posicion 33: c 
+Char devuelto posicion 34: t 
+Char devuelto posicion 35: r 
+Char devuelto posicion 36: ] 
+Char devuelto posicion 37:   
+Char devuelto posicion 38: - 
+Char devuelto posicion 39:   
+Char devuelto posicion 40: x 
+Char devuelto posicion 41: _ 
+Char devuelto posicion 42: b 
+Char devuelto posicion 43: a 
+Char devuelto posicion 44: r 
+Char devuelto posicion 45: ) 
+Char devuelto posicion 46:   
+Char devuelto posicion 47: * 
+Char devuelto posicion 48:   
+Char devuelto posicion 49: ( 
+Char devuelto posicion 50: y 
+Char devuelto posicion 51: [ 
+Char devuelto posicion 52: w 
+Char devuelto posicion 53: h 
+Char devuelto posicion 54: i 
+Char devuelto posicion 55: l 
+Char devuelto posicion 56: e 
+Char devuelto posicion 57: c 
+Char devuelto posicion 58: t 
+Char devuelto posicion 59: r 
+Char devuelto posicion 60: ] 
+Char devuelto posicion 61:   
+Char devuelto posicion 62: - 
+Char devuelto posicion 63:   
+1Cargado Bloque1: y_bar);
+        whilectr++;
+    
+Char devuelto posicion 0: y 
+Char devuelto posicion 1: _ 
+Char devuelto posicion 2: b 
+Char devuelto posicion 3: a 
+Char devuelto posicion 4: r 
+Char devuelto posicion 5: ) 
+Char devuelto posicion 6: ; 
+Char devuelto posicion 7: 
+ 
+Char devuelto posicion 8:   
+Char devuelto posicion 9:   
+Char devuelto posicion 10:   
+Char devuelto posicion 11:   
+Char devuelto posicion 12:   
+Char devuelto posicion 13:   
+Char devuelto posicion 14:   
+Char devuelto posicion 15:   
+Char devuelto posicion 16: w 
+Char devuelto posicion 17: h 
+Char devuelto posicion 18: i 
+Char devuelto posicion 19: l 
+Char devuelto posicion 20: e 
+Char devuelto posicion 21: c 
+Char devuelto posicion 22: t 
+Char devuelto posicion 23: r 
+Char devuelto posicion 24: + 
+Char devuelto posicion 25: + 
+Char devuelto posicion 26: ; 
+Char devuelto posicion 27: 
+ 
+Char devuelto posicion 28:   
+Char devuelto posicion 29:   
+Char devuelto posicion 30:   
+Char devuelto posicion 31:   
+1Cargado Bloque2: }
+    foreach (xval; x)
+        
+Char devuelto posicion 32: } 
+Char devuelto posicion 33: 
+ 
+Char devuelto posicion 34:   
+Char devuelto posicion 35:   
+Char devuelto posicion 36:   
+Char devuelto posicion 37:   
+Char devuelto posicion 38: f 
+Char devuelto posicion 39: o 
+Char devuelto posicion 40: r 
+Char devuelto posicion 41: e 
+Char devuelto posicion 42: a 
+Char devuelto posicion 43: c 
+Char devuelto posicion 44: h 
+Char devuelto posicion 45:   
+Char devuelto posicion 46: ( 
+Char devuelto posicion 47: x 
+Char devuelto posicion 48: v 
+Char devuelto posicion 49: a 
+Char devuelto posicion 50: l 
+Char devuelto posicion 51: ; 
+Char devuelto posicion 52:   
+Char devuelto posicion 53: x 
+Char devuelto posicion 54: ) 
+Char devuelto posicion 55: 
+ 
+Char devuelto posicion 56:   
+Char devuelto posicion 57:   
+Char devuelto posicion 58:   
+Char devuelto posicion 59:   
+Char devuelto posicion 60:   
+Char devuelto posicion 61:   
+Char devuelto posicion 62:   
+Char devuelto posicion 63:   
+1Cargado Bloque1: denom += ((xval-x_bar)*(xval-x_b
+Char devuelto posicion 0: d 
+Char devuelto posicion 1: e 
+Char devuelto posicion 2: n 
+Char devuelto posicion 3: o 
+Char devuelto posicion 4: m 
+Char devuelto posicion 5:   
+Char devuelto posicion 6: + 
+Char devuelto posicion 7: = 
+Char devuelto posicion 8:   
+Char devuelto posicion 9: ( 
+Char devuelto posicion 10: ( 
+Char devuelto posicion 11: x 
+Char devuelto posicion 12: v 
+Char devuelto posicion 13: a 
+Char devuelto posicion 14: l 
+Char devuelto posicion 15: - 
+Char devuelto posicion 16: x 
+Char devuelto posicion 17: _ 
+Char devuelto posicion 18: b 
+Char devuelto posicion 19: a 
+Char devuelto posicion 20: r 
+Char devuelto posicion 21: ) 
+Char devuelto posicion 22: * 
+Char devuelto posicion 23: ( 
+Char devuelto posicion 24: x 
+Char devuelto posicion 25: v 
+Char devuelto posicion 26: a 
+Char devuelto posicion 27: l 
+Char devuelto posicion 28: - 
+Char devuelto posicion 29: x 
+Char devuelto posicion 30: _ 
+Char devuelto posicion 31: b 
+1Cargado Bloque2: ar));
+    return num / denom;
+}
+
+Char devuelto posicion 32: a 
+Char devuelto posicion 33: r 
+Char devuelto posicion 34: ) 
+Char devuelto posicion 35: ) 
+Char devuelto posicion 36: ; 
+Char devuelto posicion 37: 
+ 
+Char devuelto posicion 38:   
+Char devuelto posicion 39:   
+Char devuelto posicion 40:   
+Char devuelto posicion 41:   
+Char devuelto posicion 42: r 
+Char devuelto posicion 43: e 
+Char devuelto posicion 44: t 
+Char devuelto posicion 45: u 
+Char devuelto posicion 46: r 
+Char devuelto posicion 47: n 
+Char devuelto posicion 48:   
+Char devuelto posicion 49: n 
+Char devuelto posicion 50: u 
+Char devuelto posicion 51: m 
+Char devuelto posicion 52:   
+Char devuelto posicion 53: / 
+Char devuelto posicion 54:   
+Char devuelto posicion 55: d 
+Char devuelto posicion 56: e 
+Char devuelto posicion 57: n 
+Char devuelto posicion 58: o 
+Char devuelto posicion 59: m 
+Char devuelto posicion 60: ; 
+Char devuelto posicion 61: 
+ 
+Char devuelto posicion 62: } 
+Char devuelto posicion 63: 
+ 
+1Cargado Bloque1: 
+void main()
+{
+    /+
+        Ev
+Char devuelto posicion 0: 
+ 
+Char devuelto posicion 1: v 
+Char devuelto posicion 2: o 
+Char devuelto posicion 3: i 
+Char devuelto posicion 4: d 
+Char devuelto posicion 5:   
+Char devuelto posicion 6: m 
+Char devuelto posicion 7: a 
+Char devuelto posicion 8: i 
+Char devuelto posicion 9: n 
+Char devuelto posicion 10: ( 
+Char devuelto posicion 11: ) 
+Char devuelto posicion 12: 
+ 
+Char devuelto posicion 13: { 
+Char devuelto posicion 14: 
+ 
+Char devuelto posicion 15:   
+Char devuelto posicion 16:   
+Char devuelto posicion 17:   
+Char devuelto posicion 18:   
+Char devuelto posicion 19: / 
+Char devuelto posicion 20: + 
+Char devuelto posicion 21: 
+ 
+Char devuelto posicion 22:   
+Char devuelto posicion 23:   
+Char devuelto posicion 24:   
+Char devuelto posicion 25:   
+Char devuelto posicion 26:   
+Char devuelto posicion 27:   
+Char devuelto posicion 28:   
+Char devuelto posicion 29:   
+Char devuelto posicion 30: E 
+Char devuelto posicion 31: v 
+1Cargado Bloque2: erything is done, so sit back an
+Char devuelto posicion 32: e 
+Char devuelto posicion 33: r 
+Char devuelto posicion 34: y 
+Char devuelto posicion 35: t 
+Char devuelto posicion 36: h 
+Char devuelto posicion 37: i 
+Char devuelto posicion 38: n 
+Char devuelto posicion 39: g 
+Char devuelto posicion 40:   
+Char devuelto posicion 41: i 
+Char devuelto posicion 42: s 
+Char devuelto posicion 43:   
+Char devuelto posicion 44: d 
+Char devuelto posicion 45: o 
+Char devuelto posicion 46: n 
+Char devuelto posicion 47: e 
+Char devuelto posicion 48: , 
+Char devuelto posicion 49:   
+Char devuelto posicion 50: s 
+Char devuelto posicion 51: o 
+Char devuelto posicion 52:   
+Char devuelto posicion 53: s 
+Char devuelto posicion 54: i 
+Char devuelto posicion 55: t 
+Char devuelto posicion 56:   
+Char devuelto posicion 57: b 
+Char devuelto posicion 58: a 
+Char devuelto posicion 59: c 
+Char devuelto posicion 60: k 
+Char devuelto posicion 61:   
+Char devuelto posicion 62: a 
+Char devuelto posicion 63: n 
+1Cargado Bloque1: d enjoy!
+        /+
+            
+Char devuelto posicion 0: d 
+Char devuelto posicion 1:   
+Char devuelto posicion 2: e 
+Char devuelto posicion 3: n 
+Char devuelto posicion 4: j 
+Char devuelto posicion 5: o 
+Char devuelto posicion 6: y 
+Char devuelto posicion 7: ! 
+Char devuelto posicion 8: 
+ 
+Char devuelto posicion 9:   
+Char devuelto posicion 10:   
+Char devuelto posicion 11:   
+Char devuelto posicion 12:   
+Char devuelto posicion 13:   
+Char devuelto posicion 14:   
+Char devuelto posicion 15:   
+Char devuelto posicion 16:   
+Char devuelto posicion 17: / 
+Char devuelto posicion 18: + 
+Char devuelto posicion 19: 
+ 
+Char devuelto posicion 20:   
+Char devuelto posicion 21:   
+Char devuelto posicion 22:   
+Char devuelto posicion 23:   
+Char devuelto posicion 24:   
+Char devuelto posicion 25:   
+Char devuelto posicion 26:   
+Char devuelto posicion 27:   
+Char devuelto posicion 28:   
+Char devuelto posicion 29:   
+Char devuelto posicion 30:   
+Char devuelto posicion 31:   
+1Cargado Bloque2: Nested comments should be suppor
+Char devuelto posicion 32: N 
+Char devuelto posicion 33: e 
+Char devuelto posicion 34: s 
+Char devuelto posicion 35: t 
+Char devuelto posicion 36: e 
+Char devuelto posicion 37: d 
+Char devuelto posicion 38:   
+Char devuelto posicion 39: c 
+Char devuelto posicion 40: o 
+Char devuelto posicion 41: m 
+Char devuelto posicion 42: m 
+Char devuelto posicion 43: e 
+Char devuelto posicion 44: n 
+Char devuelto posicion 45: t 
+Char devuelto posicion 46: s 
+Char devuelto posicion 47:   
+Char devuelto posicion 48: s 
+Char devuelto posicion 49: h 
+Char devuelto posicion 50: o 
+Char devuelto posicion 51: u 
+Char devuelto posicion 52: l 
+Char devuelto posicion 53: d 
+Char devuelto posicion 54:   
+Char devuelto posicion 55: b 
+Char devuelto posicion 56: e 
+Char devuelto posicion 57:   
+Char devuelto posicion 58: s 
+Char devuelto posicion 59: u 
+Char devuelto posicion 60: p 
+Char devuelto posicion 61: p 
+Char devuelto posicion 62: o 
+Char devuelto posicion 63: r 
+1Cargado Bloque1: ted, no matter what's inside /*/
+Char devuelto posicion 0: t 
+Char devuelto posicion 1: e 
+Char devuelto posicion 2: d 
+Char devuelto posicion 3: , 
+Char devuelto posicion 4:   
+Char devuelto posicion 5: n 
+Char devuelto posicion 6: o 
+Char devuelto posicion 7:   
+Char devuelto posicion 8: m 
+Char devuelto posicion 9: a 
+Char devuelto posicion 10: t 
+Char devuelto posicion 11: t 
+Char devuelto posicion 12: e 
+Char devuelto posicion 13: r 
+Char devuelto posicion 14:   
+Char devuelto posicion 15: w 
+Char devuelto posicion 16: h 
+Char devuelto posicion 17: a 
+Char devuelto posicion 18: t 
+Char devuelto posicion 19: ' 
+Char devuelto posicion 20: s 
+Char devuelto posicion 21:   
+Char devuelto posicion 22: i 
+Char devuelto posicion 23: n 
+Char devuelto posicion 24: s 
+Char devuelto posicion 25: i 
+Char devuelto posicion 26: d 
+Char devuelto posicion 27: e 
+Char devuelto posicion 28:   
+Char devuelto posicion 29: / 
+Char devuelto posicion 30: * 
+Char devuelto posicion 31: / 
+1Cargado Bloque2: /*/
+        +/
+    +/
+    double
+Char devuelto posicion 32: / 
+Char devuelto posicion 33: * 
+Char devuelto posicion 34: / 
+Char devuelto posicion 35: 
+ 
+Char devuelto posicion 36:   
+Char devuelto posicion 37:   
+Char devuelto posicion 38:   
+Char devuelto posicion 39:   
+Char devuelto posicion 40:   
+Char devuelto posicion 41:   
+Char devuelto posicion 42:   
+Char devuelto posicion 43:   
+Char devuelto posicion 44: + 
+Char devuelto posicion 45: / 
+Char devuelto posicion 46: 
+ 
+Char devuelto posicion 47:   
+Char devuelto posicion 48:   
+Char devuelto posicion 49:   
+Char devuelto posicion 50:   
+Char devuelto posicion 51: + 
+Char devuelto posicion 52: / 
+Char devuelto posicion 53: 
+ 
+Char devuelto posicion 54:   
+Char devuelto posicion 55:   
+Char devuelto posicion 56:   
+Char devuelto posicion 57:   
+Char devuelto posicion 58: d 
+Char devuelto posicion 59: o 
+Char devuelto posicion 60: u 
+Char devuelto posicion 61: b 
+Char devuelto posicion 62: l 
+Char devuelto posicion 63: e 
+1Cargado Bloque1: [] x = [0b1, 2, 3, 4, 5, 6.5, 7,
+Char devuelto posicion 0: [ 
+Char devuelto posicion 1: ] 
+Char devuelto posicion 2:   
+Char devuelto posicion 3: x 
+Char devuelto posicion 4:   
+Char devuelto posicion 5: = 
+Char devuelto posicion 6:   
+Char devuelto posicion 7: [ 
+Char devuelto posicion 8: 0 
+Char devuelto posicion 9: b 
+Char devuelto posicion 10: 1 
+Char devuelto posicion 11: , 
+Char devuelto posicion 12:   
+Char devuelto posicion 13: 2 
+Char devuelto posicion 14: , 
+Char devuelto posicion 15:   
+Char devuelto posicion 16: 3 
+Char devuelto posicion 17: , 
+Char devuelto posicion 18:   
+Char devuelto posicion 19: 4 
+Char devuelto posicion 20: , 
+Char devuelto posicion 21:   
+Char devuelto posicion 22: 5 
+Char devuelto posicion 23: , 
+Char devuelto posicion 24:   
+Char devuelto posicion 25: 6 
+Char devuelto posicion 26: . 
+Char devuelto posicion 27: 5 
+Char devuelto posicion 28: , 
+Char devuelto posicion 29:   
+Char devuelto posicion 30: 7 
+Char devuelto posicion 31: , 
+1Cargado Bloque2:  7.5, 8_000/1.0e+03, 8.5];
+    d
+Char devuelto posicion 32:   
+Char devuelto posicion 33: 7 
+Char devuelto posicion 34: . 
+Char devuelto posicion 35: 5 
+Char devuelto posicion 36: , 
+Char devuelto posicion 37:   
+Char devuelto posicion 38: 8 
+Char devuelto posicion 39: _ 
+Char devuelto posicion 40: 0 
+Char devuelto posicion 41: 0 
+Char devuelto posicion 42: 0 
+Char devuelto posicion 43: / 
+Char devuelto posicion 44: 1 
+Char devuelto posicion 45: . 
+Char devuelto posicion 46: 0 
+Char devuelto posicion 47: e 
+Char devuelto posicion 48: + 
+Char devuelto posicion 49: 0 
+Char devuelto posicion 50: 3 
+Char devuelto posicion 51: , 
+Char devuelto posicion 52:   
+Char devuelto posicion 53: 8 
+Char devuelto posicion 54: . 
+Char devuelto posicion 55: 5 
+Char devuelto posicion 56: ] 
+Char devuelto posicion 57: ; 
+Char devuelto posicion 58: 
+ 
+Char devuelto posicion 59:   
+Char devuelto posicion 60:   
+Char devuelto posicion 61:   
+Char devuelto posicion 62:   
+Char devuelto posicion 63: d 
+1Cargado Bloque1: ouble[] y = [1, 2, 3, 3.2, 3.4, 
+Char devuelto posicion 0: o 
+Char devuelto posicion 1: u 
+Char devuelto posicion 2: b 
+Char devuelto posicion 3: l 
+Char devuelto posicion 4: e 
+Char devuelto posicion 5: [ 
+Char devuelto posicion 6: ] 
+Char devuelto posicion 7:   
+Char devuelto posicion 8: y 
+Char devuelto posicion 9:   
+Char devuelto posicion 10: = 
+Char devuelto posicion 11:   
+Char devuelto posicion 12: [ 
+Char devuelto posicion 13: 1 
+Char devuelto posicion 14: , 
+Char devuelto posicion 15:   
+Char devuelto posicion 16: 2 
+Char devuelto posicion 17: , 
+Char devuelto posicion 18:   
+Char devuelto posicion 19: 3 
+Char devuelto posicion 20: , 
+Char devuelto posicion 21:   
+Char devuelto posicion 22: 3 
+Char devuelto posicion 23: . 
+Char devuelto posicion 24: 2 
+Char devuelto posicion 25: , 
+Char devuelto posicion 26:   
+Char devuelto posicion 27: 3 
+Char devuelto posicion 28: . 
+Char devuelto posicion 29: 4 
+Char devuelto posicion 30: , 
+Char devuelto posicion 31:   
+1Cargado Bloque2: 40e-1, 4.2, 4.3, 4.35, 4.37];
+  
+Char devuelto posicion 32: 4 
+Char devuelto posicion 33: 0 
+Char devuelto posicion 34: e 
+Char devuelto posicion 35: - 
+Char devuelto posicion 36: 1 
+Char devuelto posicion 37: , 
+Char devuelto posicion 38:   
+Char devuelto posicion 39: 4 
+Char devuelto posicion 40: . 
+Char devuelto posicion 41: 2 
+Char devuelto posicion 42: , 
+Char devuelto posicion 43:   
+Char devuelto posicion 44: 4 
+Char devuelto posicion 45: . 
+Char devuelto posicion 46: 3 
+Char devuelto posicion 47: , 
+Char devuelto posicion 48:   
+Char devuelto posicion 49: 4 
+Char devuelto posicion 50: . 
+Char devuelto posicion 51: 3 
+Char devuelto posicion 52: 5 
+Char devuelto posicion 53: , 
+Char devuelto posicion 54:   
+Char devuelto posicion 55: 4 
+Char devuelto posicion 56: . 
+Char devuelto posicion 57: 3 
+Char devuelto posicion 58: 7 
+Char devuelto posicion 59: ] 
+Char devuelto posicion 60: ; 
+Char devuelto posicion 61: 
+ 
+Char devuelto posicion 62:   
+Char devuelto posicion 63:   
+1Cargado Bloque1:   double x_bar, y_bar, b1, _0;
+ 
+Char devuelto posicion 0:   
+Char devuelto posicion 1:   
+Char devuelto posicion 2: d 
+Char devuelto posicion 3: o 
+Char devuelto posicion 4: u 
+Char devuelto posicion 5: b 
+Char devuelto posicion 6: l 
+Char devuelto posicion 7: e 
+Char devuelto posicion 8:   
+Char devuelto posicion 9: x 
+Char devuelto posicion 10: _ 
+Char devuelto posicion 11: b 
+Char devuelto posicion 12: a 
+Char devuelto posicion 13: r 
+Char devuelto posicion 14: , 
+Char devuelto posicion 15:   
+Char devuelto posicion 16: y 
+Char devuelto posicion 17: _ 
+Char devuelto posicion 18: b 
+Char devuelto posicion 19: a 
+Char devuelto posicion 20: r 
+Char devuelto posicion 21: , 
+Char devuelto posicion 22:   
+Char devuelto posicion 23: b 
+Char devuelto posicion 24: 1 
+Char devuelto posicion 25: , 
+Char devuelto posicion 26:   
+Char devuelto posicion 27: _ 
+Char devuelto posicion 28: 0 
+Char devuelto posicion 29: ; 
+Char devuelto posicion 30: 
+ 
+Char devuelto posicion 31:   
+1Cargado Bloque2:    //Mean and regression paramet
+Char devuelto posicion 32:   
+Char devuelto posicion 33:   
+Char devuelto posicion 34:   
+Char devuelto posicion 35: / 
+Char devuelto posicion 36: / 
+Char devuelto posicion 37: M 
+Char devuelto posicion 38: e 
+Char devuelto posicion 39: a 
+Char devuelto posicion 40: n 
+Char devuelto posicion 41:   
+Char devuelto posicion 42: a 
+Char devuelto posicion 43: n 
+Char devuelto posicion 44: d 
+Char devuelto posicion 45:   
+Char devuelto posicion 46: r 
+Char devuelto posicion 47: e 
+Char devuelto posicion 48: g 
+Char devuelto posicion 49: r 
+Char devuelto posicion 50: e 
+Char devuelto posicion 51: s 
+Char devuelto posicion 52: s 
+Char devuelto posicion 53: i 
+Char devuelto posicion 54: o 
+Char devuelto posicion 55: n 
+Char devuelto posicion 56:   
+Char devuelto posicion 57: p 
+Char devuelto posicion 58: a 
+Char devuelto posicion 59: r 
+Char devuelto posicion 60: a 
+Char devuelto posicion 61: m 
+Char devuelto posicion 62: e 
+Char devuelto posicion 63: t 
+1Cargado Bloque1: ers calculation
+    x_bar = sum(
+Char devuelto posicion 0: e 
+Char devuelto posicion 1: r 
+Char devuelto posicion 2: s 
+Char devuelto posicion 3:   
+Char devuelto posicion 4: c 
+Char devuelto posicion 5: a 
+Char devuelto posicion 6: l 
+Char devuelto posicion 7: c 
+Char devuelto posicion 8: u 
+Char devuelto posicion 9: l 
+Char devuelto posicion 10: a 
+Char devuelto posicion 11: t 
+Char devuelto posicion 12: i 
+Char devuelto posicion 13: o 
+Char devuelto posicion 14: n 
+Char devuelto posicion 15: 
+ 
+Char devuelto posicion 16:   
+Char devuelto posicion 17:   
+Char devuelto posicion 18:   
+Char devuelto posicion 19:   
+Char devuelto posicion 20: x 
+Char devuelto posicion 21: _ 
+Char devuelto posicion 22: b 
+Char devuelto posicion 23: a 
+Char devuelto posicion 24: r 
+Char devuelto posicion 25:   
+Char devuelto posicion 26: = 
+Char devuelto posicion 27:   
+Char devuelto posicion 28: s 
+Char devuelto posicion 29: u 
+Char devuelto posicion 30: m 
+Char devuelto posicion 31: ( 
+1Cargado Bloque2: x)/(cast(double)x.length);
+    y
+Char devuelto posicion 32: x 
+Char devuelto posicion 33: ) 
+Char devuelto posicion 34: / 
+Char devuelto posicion 35: ( 
+Char devuelto posicion 36: c 
+Char devuelto posicion 37: a 
+Char devuelto posicion 38: s 
+Char devuelto posicion 39: t 
+Char devuelto posicion 40: ( 
+Char devuelto posicion 41: d 
+Char devuelto posicion 42: o 
+Char devuelto posicion 43: u 
+Char devuelto posicion 44: b 
+Char devuelto posicion 45: l 
+Char devuelto posicion 46: e 
+Char devuelto posicion 47: ) 
+Char devuelto posicion 48: x 
+Char devuelto posicion 49: . 
+Char devuelto posicion 50: l 
+Char devuelto posicion 51: e 
+Char devuelto posicion 52: n 
+Char devuelto posicion 53: g 
+Char devuelto posicion 54: t 
+Char devuelto posicion 55: h 
+Char devuelto posicion 56: ) 
+Char devuelto posicion 57: ; 
+Char devuelto posicion 58: 
+ 
+Char devuelto posicion 59:   
+Char devuelto posicion 60:   
+Char devuelto posicion 61:   
+Char devuelto posicion 62:   
+Char devuelto posicion 63: y 
+1Cargado Bloque1: _bar = sum(y)/(cast(double)y.len
+Char devuelto posicion 0: _ 
+Char devuelto posicion 1: b 
+Char devuelto posicion 2: a 
+Char devuelto posicion 3: r 
+Char devuelto posicion 4:   
+Char devuelto posicion 5: = 
+Char devuelto posicion 6:   
+Char devuelto posicion 7: s 
+Char devuelto posicion 8: u 
+Char devuelto posicion 9: m 
+Char devuelto posicion 10: ( 
+Char devuelto posicion 11: y 
+Char devuelto posicion 12: ) 
+Char devuelto posicion 13: / 
+Char devuelto posicion 14: ( 
+Char devuelto posicion 15: c 
+Char devuelto posicion 16: a 
+Char devuelto posicion 17: s 
+Char devuelto posicion 18: t 
+Char devuelto posicion 19: ( 
+Char devuelto posicion 20: d 
+Char devuelto posicion 21: o 
+Char devuelto posicion 22: u 
+Char devuelto posicion 23: b 
+Char devuelto posicion 24: l 
+Char devuelto posicion 25: e 
+Char devuelto posicion 26: ) 
+Char devuelto posicion 27: y 
+Char devuelto posicion 28: . 
+Char devuelto posicion 29: l 
+Char devuelto posicion 30: e 
+Char devuelto posicion 31: n 
+1Cargado Bloque2: gth);
+    b1 = beta1(x, y, x_bar
+Char devuelto posicion 32: g 
+Char devuelto posicion 33: t 
+Char devuelto posicion 34: h 
+Char devuelto posicion 35: ) 
+Char devuelto posicion 36: ; 
+Char devuelto posicion 37: 
+ 
+Char devuelto posicion 38:   
+Char devuelto posicion 39:   
+Char devuelto posicion 40:   
+Char devuelto posicion 41:   
+Char devuelto posicion 42: b 
+Char devuelto posicion 43: 1 
+Char devuelto posicion 44:   
+Char devuelto posicion 45: = 
+Char devuelto posicion 46:   
+Char devuelto posicion 47: b 
+Char devuelto posicion 48: e 
+Char devuelto posicion 49: t 
+Char devuelto posicion 50: a 
+Char devuelto posicion 51: 1 
+Char devuelto posicion 52: ( 
+Char devuelto posicion 53: x 
+Char devuelto posicion 54: , 
+Char devuelto posicion 55:   
+Char devuelto posicion 56: y 
+Char devuelto posicion 57: , 
+Char devuelto posicion 58:   
+Char devuelto posicion 59: x 
+Char devuelto posicion 60: _ 
+Char devuelto posicion 61: b 
+Char devuelto posicion 62: a 
+Char devuelto posicion 63: r 
+1Cargado Bloque1: , y_bar);
+    _0 = y_bar - (b1*x
+Char devuelto posicion 0: , 
+Char devuelto posicion 1:   
+Char devuelto posicion 2: y 
+Char devuelto posicion 3: _ 
+Char devuelto posicion 4: b 
+Char devuelto posicion 5: a 
+Char devuelto posicion 6: r 
+Char devuelto posicion 7: ) 
+Char devuelto posicion 8: ; 
+Char devuelto posicion 9: 
+ 
+Char devuelto posicion 10:   
+Char devuelto posicion 11:   
+Char devuelto posicion 12:   
+Char devuelto posicion 13:   
+Char devuelto posicion 14: _ 
+Char devuelto posicion 15: 0 
+Char devuelto posicion 16:   
+Char devuelto posicion 17: = 
+Char devuelto posicion 18:   
+Char devuelto posicion 19: y 
+Char devuelto posicion 20: _ 
+Char devuelto posicion 21: b 
+Char devuelto posicion 22: a 
+Char devuelto posicion 23: r 
+Char devuelto posicion 24:   
+Char devuelto posicion 25: - 
+Char devuelto posicion 26:   
+Char devuelto posicion 27: ( 
+Char devuelto posicion 28: b 
+Char devuelto posicion 29: 1 
+Char devuelto posicion 30: * 
+Char devuelto posicion 31: x 
+1Cargado Bloque2: _bar);
+    /**/ /* Print result 
+Char devuelto posicion 32: _ 
+Char devuelto posicion 33: b 
+Char devuelto posicion 34: a 
+Char devuelto posicion 35: r 
+Char devuelto posicion 36: ) 
+Char devuelto posicion 37: ; 
+Char devuelto posicion 38: 
+ 
+Char devuelto posicion 39:   
+Char devuelto posicion 40:   
+Char devuelto posicion 41:   
+Char devuelto posicion 42:   
+Char devuelto posicion 43: / 
+Char devuelto posicion 44: * 
+Char devuelto posicion 45: * 
+Char devuelto posicion 46: / 
+Char devuelto posicion 47:   
+Char devuelto posicion 48: / 
+Char devuelto posicion 49: * 
+Char devuelto posicion 50:   
+Char devuelto posicion 51: P 
+Char devuelto posicion 52: r 
+Char devuelto posicion 53: i 
+Char devuelto posicion 54: n 
+Char devuelto posicion 55: t 
+Char devuelto posicion 56:   
+Char devuelto posicion 57: r 
+Char devuelto posicion 58: e 
+Char devuelto posicion 59: s 
+Char devuelto posicion 60: u 
+Char devuelto posicion 61: l 
+Char devuelto posicion 62: t 
+Char devuelto posicion 63:   
+1Cargado Bloque1: */ /**/
+    writefln("\"Slope\":
+Char devuelto posicion 0: * 
+Char devuelto posicion 1: / 
+Char devuelto posicion 2:   
+Char devuelto posicion 3: / 
+Char devuelto posicion 4: * 
+Char devuelto posicion 5: * 
+Char devuelto posicion 6: / 
+Char devuelto posicion 7: 
+ 
+Char devuelto posicion 8:   
+Char devuelto posicion 9:   
+Char devuelto posicion 10:   
+Char devuelto posicion 11:   
+Char devuelto posicion 12: w 
+Char devuelto posicion 13: r 
+Char devuelto posicion 14: i 
+Char devuelto posicion 15: t 
+Char devuelto posicion 16: e 
+Char devuelto posicion 17: f 
+Char devuelto posicion 18: l 
+Char devuelto posicion 19: n 
+Char devuelto posicion 20: ( 
+Char devuelto posicion 21: " 
+Char devuelto posicion 22: \ 
+Char devuelto posicion 23: " 
+Char devuelto posicion 24: S 
+Char devuelto posicion 25: l 
+Char devuelto posicion 26: o 
+Char devuelto posicion 27: p 
+Char devuelto posicion 28: e 
+Char devuelto posicion 29: \ 
+Char devuelto posicion 30: " 
+Char devuelto posicion 31: : 
+1Cargado Bloque2:  %f", b1);
+    writefln("\"Inter
+Char devuelto posicion 32:   
+Char devuelto posicion 33: % 
+Char devuelto posicion 34: f 
+Char devuelto posicion 35: " 
+Char devuelto posicion 36: , 
+Char devuelto posicion 37:   
+Char devuelto posicion 38: b 
+Char devuelto posicion 39: 1 
+Char devuelto posicion 40: ) 
+Char devuelto posicion 41: ; 
+Char devuelto posicion 42: 
+ 
+Char devuelto posicion 43:   
+Char devuelto posicion 44:   
+Char devuelto posicion 45:   
+Char devuelto posicion 46:   
+Char devuelto posicion 47: w 
+Char devuelto posicion 48: r 
+Char devuelto posicion 49: i 
+Char devuelto posicion 50: t 
+Char devuelto posicion 51: e 
+Char devuelto posicion 52: f 
+Char devuelto posicion 53: l 
+Char devuelto posicion 54: n 
+Char devuelto posicion 55: ( 
+Char devuelto posicion 56: " 
+Char devuelto posicion 57: \ 
+Char devuelto posicion 58: " 
+Char devuelto posicion 59: I 
+Char devuelto posicion 60: n 
+Char devuelto posicion 61: t 
+Char devuelto posicion 62: e 
+Char devuelto posicion 63: r 
+1Cargado Bloque1: cept\": %f", _0);
+    ///Parsing
+Char devuelto posicion 0: c 
+Char devuelto posicion 1: e 
+Char devuelto posicion 2: p 
+Char devuelto posicion 3: t 
+Char devuelto posicion 4: \ 
+Char devuelto posicion 5: " 
+Char devuelto posicion 6: : 
+Char devuelto posicion 7:   
+Char devuelto posicion 8: % 
+Char devuelto posicion 9: f 
+Char devuelto posicion 10: " 
+Char devuelto posicion 11: , 
+Char devuelto posicion 12:   
+Char devuelto posicion 13: _ 
+Char devuelto posicion 14: 0 
+Char devuelto posicion 15: ) 
+Char devuelto posicion 16: ; 
+Char devuelto posicion 17: 
+ 
+Char devuelto posicion 18:   
+Char devuelto posicion 19:   
+Char devuelto posicion 20:   
+Char devuelto posicion 21:   
+Char devuelto posicion 22: / 
+Char devuelto posicion 23: / 
+Char devuelto posicion 24: / 
+Char devuelto posicion 25: P 
+Char devuelto posicion 26: a 
+Char devuelto posicion 27: r 
+Char devuelto posicion 28: s 
+Char devuelto posicion 29: i 
+Char devuelto posicion 30: n 
+Char devuelto posicion 31: g 
+1Cargado Bloque2:  tests. Comment to compile
+    a
+Char devuelto posicion 32:   
+Char devuelto posicion 33: t 
+Char devuelto posicion 34: e 
+Char devuelto posicion 35: s 
+Char devuelto posicion 36: t 
+Char devuelto posicion 37: s 
+Char devuelto posicion 38: . 
+Char devuelto posicion 39:   
+Char devuelto posicion 40: C 
+Char devuelto posicion 41: o 
+Char devuelto posicion 42: m 
+Char devuelto posicion 43: m 
+Char devuelto posicion 44: e 
+Char devuelto posicion 45: n 
+Char devuelto posicion 46: t 
+Char devuelto posicion 47:   
+Char devuelto posicion 48: t 
+Char devuelto posicion 49: o 
+Char devuelto posicion 50:   
+Char devuelto posicion 51: c 
+Char devuelto posicion 52: o 
+Char devuelto posicion 53: m 
+Char devuelto posicion 54: p 
+Char devuelto posicion 55: i 
+Char devuelto posicion 56: l 
+Char devuelto posicion 57: e 
+Char devuelto posicion 58: 
+ 
+Char devuelto posicion 59:   
+Char devuelto posicion 60:   
+Char devuelto posicion 61:   
+Char devuelto posicion 62:   
+Char devuelto posicion 63: a 
+1Cargado Bloque1:  = /+ // +/ 1;
+    a = /+ "+/" +
+Char devuelto posicion 0:   
+Char devuelto posicion 1: = 
+Char devuelto posicion 2:   
+Char devuelto posicion 3: / 
+Char devuelto posicion 4: + 
+Char devuelto posicion 5:   
+Char devuelto posicion 6: / 
+Char devuelto posicion 7: / 
+Char devuelto posicion 8:   
+Char devuelto posicion 9: + 
+Char devuelto posicion 10: / 
+Char devuelto posicion 11:   
+Char devuelto posicion 12: 1 
+Char devuelto posicion 13: ; 
+Char devuelto posicion 14: 
+ 
+Char devuelto posicion 15:   
+Char devuelto posicion 16:   
+Char devuelto posicion 17:   
+Char devuelto posicion 18:   
+Char devuelto posicion 19: a 
+Char devuelto posicion 20:   
+Char devuelto posicion 21: = 
+Char devuelto posicion 22:   
+Char devuelto posicion 23: / 
+Char devuelto posicion 24: + 
+Char devuelto posicion 25:   
+Char devuelto posicion 26: " 
+Char devuelto posicion 27: + 
+Char devuelto posicion 28: / 
+Char devuelto posicion 29: " 
+Char devuelto posicion 30:   
+Char devuelto posicion 31: + 
+1Cargado Bloque2: / 1";
+    a = /+ /* +/ *2/ 3;
+}EOF
+Char devuelto posicion 32: / 
+Char devuelto posicion 33:   
+Char devuelto posicion 34: 1 
+Char devuelto posicion 35: " 
+Char devuelto posicion 36: ; 
+Char devuelto posicion 37: 
+ 
+Char devuelto posicion 38:   
+Char devuelto posicion 39:   
+Char devuelto posicion 40:   
+Char devuelto posicion 41:   
+Char devuelto posicion 42: a 
+Char devuelto posicion 43:   
+Char devuelto posicion 44: = 
+Char devuelto posicion 45:   
+Char devuelto posicion 46: / 
+Char devuelto posicion 47: + 
+Char devuelto posicion 48:   
+Char devuelto posicion 49: / 
+Char devuelto posicion 50: * 
+Char devuelto posicion 51:   
+Char devuelto posicion 52: + 
+Char devuelto posicion 53: / 
+Char devuelto posicion 54:   
+Char devuelto posicion 55: * 
+Char devuelto posicion 56: 2 
+Char devuelto posicion 57: / 
+Char devuelto posicion 58:   
+Char devuelto posicion 59: 3 
+Char devuelto posicion 60: ; 
+Char devuelto posicion 61: 
+ 
+Char devuelto posicion 62: } 
+Char devuelto posicion 63: ÿ 
+-1Cargado Bloque1: EOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOF
+
+

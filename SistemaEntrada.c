@@ -25,10 +25,16 @@ long fin=0;
 
 
 ////////// FUNCIONES PRIVADAS
+
 //Si bloque es 1, carga MAX-1 caracteres en bloque1.
 //Si bloque es 2, carga MAX-1 caracteres en bloque2.
 //En ambos casos soloca EOF al final de los bloques
 void cargarBloque(int bloque);
+// Recorre el bloque indicado por int bloque, y coloca todos su caracteres a EOF.
+// La única manera de devolver un EOF, es si fscanf deja posiciones sin sobreescribir ->
+// no hay más caracteres en el archivo -> fin.
+// Si justo coincide en última posición de bloque, se cargaría uno ínutil. Pero se devovlería EOF en la 
+//primera iteracción de lectura.
 void limpiar(int bloque);
 
 //Función de depuración.
@@ -65,25 +71,28 @@ int iniciaSistemaEntrada(char* archivo){
 }
 
 char siguienteChar(){
-    //está en bloque 2
+    //estamos en bloque 2
     if(fin>=MAX){
         char c = bloque2[fin-MAX];
         printf("Char devuelto posicion %ld: %c \n",fin, c);
-        fin++;
         if(fin==2*MAX-1){
             cargarBloque(1);
             fin=0;
         }
+        else{
+            fin++;
+        }
         return(c);
     }
-    //está en bloque 1
+    //estamos en bloque 1
     else{
         char c = bloque1[fin];
         printf("Char devuelto posicion %ld: %c \n",fin, c);
-        fin++;
         if(fin==MAX-1){
             cargarBloque(2);
             fin=MAX;
+        }else{
+            fin++;
         }
         return(c);
     }
@@ -137,10 +146,9 @@ void cargarBloque(int bloque){
         if(bloque==1){
             limpiar(1);
             //Leemos MAX-1 caracteres
-            int a = fscanf(ptr, "%31c", bloque1);
+            int a = fscanf(ptr, "%32c", bloque1);
             printf("%d",a);
             //fgets(bloque1, MAX, ptr);
-            bloque1[MAX-1] = EOF;
             printf("Cargado Bloque1: ");
             imprimeBloque(1);
             printf("\n");
@@ -148,10 +156,9 @@ void cargarBloque(int bloque){
         else{
             limpiar(2);
             //Leemos MAX-1 caracteres
-            int a = fscanf(ptr, "%31c", bloque2);
+            int a = fscanf(ptr, "%32c", bloque2);
             printf("%d",a);
             //fgets(bloque2, MAX, ptr);
-            bloque2[MAX-1] = EOF;
             printf("Cargado Bloque2: ");
             imprimeBloque(2);
             printf("\n");
