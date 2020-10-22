@@ -76,10 +76,16 @@ int main(int argc, char *argv[])
     if(iniciaSistemaEntrada(argv[1])==-1){
         exit(-1);
     }
+    /*char c;
+    for(int i=0;i<10;i++){
+        cargarBloque(2);
+        cargarBloque(1);
+    }*/
 
-    for(int i=0;i<10000;i++){
-        siguienteChar();
-    }
+    char c;
+    do{
+        c=siguienteChar();
+    }while(c!=EOF);
     printf("\n\n");
 
     return(finSistemaEntrada());
