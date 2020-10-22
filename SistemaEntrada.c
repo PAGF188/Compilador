@@ -12,6 +12,7 @@
 #include "./headerFiles/SistemaEntrada.h"
 #include "./headerFiles/Errores.h"
 
+//Nota: Cambiar también lo del fscanf
 #define MAX 32
 
 //Variables globales.
