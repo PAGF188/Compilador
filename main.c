@@ -88,28 +88,28 @@ int main(int argc, char *argv[])
     }while(c!=EOF);
     printf("\n\n");*/
 
-    /*for(int i=0;i<3;i++){
+    for(int i=0;i<32;i++){
         printf("%c",siguienteChar());
-
     }
+    devolverCaracter(1);
+    printf("\n\nUltimo Nuevo:%c",siguienteChar());
     printf("\nLexema: %s\n\n", siguienteLexema());
 
-    for(int i=0;i<3;i++){
+    for(int i=0;i<42;i++){
         printf("%c",siguienteChar());
     }
-    printf("\nLexema: %s\n\n", siguienteLexema());*/
+
+    printf("\nLexema: %s\n\n", siguienteLexema());
+
+    for(int i=0;i<53;i++){
+        printf("%c",siguienteChar());
+    }
     
-    for(int i=0;i<63;i++){
-        printf("%c",siguienteChar());
-
-    }
     printf("\nLexema: %s\n\n", siguienteLexema());
 
-    //printf("%s\n", siguienteLexema());
 
 
-
-    return(finSistemaEntrada());
+    //finSistemaEntrada();
 
     /*
     //Iniciamos sistema de entrada. 

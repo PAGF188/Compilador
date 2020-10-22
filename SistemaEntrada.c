@@ -29,6 +29,9 @@ char bloque2[MAX];
 long inicio=0;   
 long fin=0;
 
+//para saber si he devuelto un caracter y no tengo que cargar bloque2
+int puedo_b1 = 1;
+int puedo_b2 = 1;
 
 ////////// FUNCIONES PRIVADAS
 
@@ -81,20 +84,22 @@ char siguienteChar(){
     //estamos en bloque 2
     if(fin>=MAX){
         c = bloque2[fin-MAX];
-        if(fin==2*MAX-1){
+        if(fin==2*MAX-1 && puedo_b2){
             cargarBloque(1);
             fin=0;
         }else{
+            puedo_b2=1;
             fin++;
         }
     }
     //estamos en bloque 1
     else{
         c = bloque1[fin];
-        if(fin==MAX-1){
+        if(fin==MAX-1 && puedo_b1){
             cargarBloque(2);
             fin=MAX;
         }else{
+            puedo_b1=1;
             fin++;
         }
     }
@@ -132,9 +137,20 @@ char * siguienteLexema(){
 }
 
 void devolverCaracter(int nposiciones){
-    fin--;
+    //Ojo, si pasamos de un bloque a otro evitar vovler a cargarlo.
+    int aux = fin;
+    fin=fin-nposiciones;
     if(fin<0){
+        //volvimos al bloque2
         fin = MAX-1+fin;
+        //no volver a cargar bloque1
+        puedo_b1=0;
+    }
+
+    if(aux>=MAX && fin <MAX){
+        //volvimos al bloque1
+        //no volver a cargar bloque2
+        puedo_b2=0;
     }
 }
 
