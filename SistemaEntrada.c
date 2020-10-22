@@ -18,7 +18,7 @@
 
 //Nota: Cambiar también el nº de char leídos por fscanf!!!!!!!
 //Nota2: Si fin supera a inicio al pedir caracteres->error tama lexema demasiado grande
-#define MAX 32
+#define MAX 64
 
 //Variables globales.
 FILE *ptr;  //fichero
@@ -28,6 +28,8 @@ char bloque2[MAX];
 //punteros centinela. Toman valores de 0 a 2*MAX-1
 long inicio=0;   
 long fin=0;
+//para saber tam del lexema
+int t_lexema=0;
 
 //para saber si he devuelto un caracter y no tengo que cargar bloque2
 int puedo_b1 = 1;
@@ -103,8 +105,9 @@ char siguienteChar(){
             fin++;
         }
     }
+    t_lexema++;
     //Una vez incrementado fin, nunca debería coincidir con inicio
-    if(fin==inicio){
+    if(t_lexema==MAX){
         imprimeError(4);
         exit(-1);
     }
@@ -114,9 +117,13 @@ char siguienteChar(){
 char * siguienteLexema(){
     if(fin!=inicio){
         char * lexema;
-        int tam = fin-inicio;
-        if(tam<0)
-            tam = -tam;
+        int tam;
+        if(inicio<fin){
+            tam=fin-inicio;
+        }
+        else{
+            tam = 2*MAX-inicio+fin;
+        }
         lexema = (char *) malloc(tam+1);
         int i=0;
         while (inicio!=fin){
@@ -130,6 +137,7 @@ char * siguienteLexema(){
             inicio=(inicio+1)%(MAX*2);
         }
         lexema[tam] = '\0';
+        t_lexema=0;
         return(lexema);
     }else{
         return(NULL);
@@ -172,13 +180,13 @@ void cargarBloque(int bloque){
         if(bloque==1){
             limpiar(1);
             //Leemos MAX-1 caracteres
-            fscanf(ptr, "%32c", bloque1);
+            fscanf(ptr, "%64c", bloque1);
             //fgets(bloque1, MAX, ptr);
         }
         else{
             limpiar(2);
             //Leemos MAX-1 caracteres
-            fscanf(ptr, "%32c", bloque2);
+            fscanf(ptr, "%64c", bloque2);
             //fgets(bloque2, MAX, ptr);
         }
     }

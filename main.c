@@ -88,24 +88,45 @@ int main(int argc, char *argv[])
     }while(c!=EOF);
     printf("\n\n");*/
 
-    for(int i=0;i<32;i++){
-        printf("%c",siguienteChar());
-    }
-    devolverCaracter(1);
-    printf("\n\nUltimo Nuevo:%c",siguienteChar());
-    printf("\nLexema: %s\n\n", siguienteLexema());
 
-    for(int i=0;i<42;i++){
+    for(int i=0;i<63;i++){
         printf("%c",siguienteChar());
     }
 
-    printf("\nLexema: %s\n\n", siguienteLexema());
+    printf("\n!!!!!1Lexema: %s\n\n", siguienteLexema());
 
-    for(int i=0;i<53;i++){
+    for(int i=0;i<63;i++){
         printf("%c",siguienteChar());
     }
-    
-    printf("\nLexema: %s\n\n", siguienteLexema());
+
+    printf("\n!!!!!1Lexema: %s\n\n", siguienteLexema());
+
+    for(int i=0;i<63;i++){
+        printf("%c",siguienteChar());
+    }
+
+    printf("\n!!!!!1Lexema: %s\n\n", siguienteLexema());
+
+    for(int i=0;i<63;i++){
+        printf("%c",siguienteChar());
+    }
+
+    printf("\n!!!!!1Lexema: %s\n\n", siguienteLexema());
+
+    for(int i=0;i<63;i++){
+        printf("%c",siguienteChar());
+    }
+
+    printf("\n!!!!!1Lexema: %s\n\n", siguienteLexema());
+
+
+    for(int i=0;i<23;i++){
+        printf("%c",siguienteChar());
+    }
+
+    printf("\n!!!!!1Lexema: %s\n\n", siguienteLexema());
+
+
 
 
 
