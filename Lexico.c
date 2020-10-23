@@ -135,9 +135,11 @@ int automataComentario(){
     }
     //Comentario en línea tipo //
     if(c=='/'){
-        do{
-            c = d;
-            d = siguienteChar();
-        }while(c!='\n');
+        c=d;
+        while(c!='\n'){
+            c = siguienteChar();
+            siguienteLexema();
+        }
+        return(1);
     }
 }

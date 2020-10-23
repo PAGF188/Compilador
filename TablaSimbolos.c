@@ -86,9 +86,8 @@ void destruirTablaSimbolos() {
 }
 
 int insertarPalabraReservada(tipoelem E){
-    //Si no está activado el campo de palabra reservada
     // o lexema es nulo o palabra reservada ya insertada -> error.
-    if(!E.esPalabraReservada || E.lexema==NULL || es_miembro_clave(tablaSimbolos,E.lexema)){
+    if(E.lexema==NULL || es_miembro_clave(tablaSimbolos,E.lexema)){
         return(-1);
     }
     insertar(&tablaSimbolos,E);

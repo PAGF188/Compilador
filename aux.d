@@ -1,13 +1,8 @@
-asd.lpaos;_123=
-asd{ad}
-alskd     import,;
 
-/+
-        Everything is done, so sit back and enjoy!
-        /+
-            Nested comments should be supported, no matter what's inside /*//*/
-        +/
-    +/
+asd
+/+  /**/dasd/++/+/
+b
 
-kasjdh;asd
-
+a = /+ // +/ asd;
+    a = /+ "+/ sd d;
+    a = /+ /* +/ d/ 3;
