@@ -117,14 +117,7 @@ char siguienteChar(){
 char * siguienteLexema(){
     if(fin!=inicio){
         char * lexema;
-        int tam;
-        if(inicio<fin){
-            tam=fin-inicio;
-        }
-        else{
-            tam = 2*MAX-inicio+fin;
-        }
-        lexema = (char *) malloc(tam+1);
+        lexema = (char *) malloc(t_lexema+1);
         int i=0;
         while (inicio!=fin){
             if(inicio>=MAX){
@@ -136,7 +129,7 @@ char * siguienteLexema(){
             i++;
             inicio=(inicio+1)%(MAX*2);
         }
-        lexema[tam] = '\0';
+        lexema[t_lexema] = '\0';
         t_lexema=0;
         return(lexema);
     }else{
@@ -160,6 +153,7 @@ void devolverCaracter(int nposiciones){
         //no volver a cargar bloque2
         puedo_b2=0;
     }
+    t_lexema--;
 }
 
 int finSistemaEntrada(){

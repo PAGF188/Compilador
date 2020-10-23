@@ -126,6 +126,32 @@ int main(int argc, char *argv[])
 
     printf("\n!!!!!1Lexema: %s\n\n", siguienteLexema());
 
+    for(int i=0;i<12;i++){
+        printf("%c",siguienteChar());
+    }
+
+    printf("\n!!!!!1Lexema: %s\n\n", siguienteLexema());
+
+    for(int i=0;i<1;i++){
+        printf("%c",siguienteChar());
+    }
+
+    printf("\n!!!!!1Lexema: %s\n\n", siguienteLexema());
+
+
+    printf("Caracter: %c\n",siguienteChar());
+    printf("Caracter: %c\n",siguienteChar());
+    printf("Caracter: %c\n",siguienteChar());
+    printf("Caracter: %c\n",siguienteChar());
+    printf("Caracter: %c\n",siguienteChar());
+
+
+
+    devolverCaracter(1);
+
+    printf("\n!!!!!1Lexema: %s\n\n", siguienteLexema());
+
+
 
 
 
