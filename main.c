@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
     //Comprobaciones correctos argumentos pasados por línea de comandos. 
     //En principio un único archivo vamos a compilar.
 
-    if(argc>2){
+    if(argc!=2){
         imprimeError(1);
         return(-1);
     }
@@ -57,118 +57,22 @@ int main(int argc, char *argv[])
     insertarPalabraReservada(_writefln);
     insertarPalabraReservada(_writefln);
 
-    insertarComponenteLexico("asd");
-    printf("\n\n");
-    insertarComponenteLexico("asd");
-    insertarComponenteLexico("b1");
-    printf("\n\n");
-    insertarComponenteLexico("b1");
-    printf("\n\n");
-    insertarComponenteLexico("b2");
-    printf("\n\n");
-
-    imprimirArbol();
-    printf("\n\n");
-
-    destruirTablaSimbolos();
-
-    //Comprobaciones sistema de entrada
-    if(iniciaSistemaEntrada(argv[1])==-1){
-        exit(-1);
-    }
-    /*char c;
-    for(int i=0;i<10;i++){
-        cargarBloque(2);
-        cargarBloque(1);
-    }*/
-
-    /*char c;
-    do{
-        c=siguienteChar();
-    }while(c!=EOF);
-    printf("\n\n");*/
-
-
-    for(int i=0;i<63;i++){
-        printf("%c",siguienteChar());
-    }
-
-    printf("\n!!!!!1Lexema: %s\n\n", siguienteLexema());
-
-    for(int i=0;i<63;i++){
-        printf("%c",siguienteChar());
-    }
-
-    printf("\n!!!!!1Lexema: %s\n\n", siguienteLexema());
-
-    for(int i=0;i<63;i++){
-        printf("%c",siguienteChar());
-    }
-
-    printf("\n!!!!!1Lexema: %s\n\n", siguienteLexema());
-
-    for(int i=0;i<63;i++){
-        printf("%c",siguienteChar());
-    }
-
-    printf("\n!!!!!1Lexema: %s\n\n", siguienteLexema());
-
-    for(int i=0;i<63;i++){
-        printf("%c",siguienteChar());
-    }
-
-    printf("\n!!!!!1Lexema: %s\n\n", siguienteLexema());
-
-
-    for(int i=0;i<23;i++){
-        printf("%c",siguienteChar());
-    }
-
-    printf("\n!!!!!1Lexema: %s\n\n", siguienteLexema());
-
-    for(int i=0;i<12;i++){
-        printf("%c",siguienteChar());
-    }
-
-    printf("\n!!!!!1Lexema: %s\n\n", siguienteLexema());
-
-    for(int i=0;i<1;i++){
-        printf("%c",siguienteChar());
-    }
-
-    printf("\n!!!!!1Lexema: %s\n\n", siguienteLexema());
-
-
-    printf("Caracter: %c\n",siguienteChar());
-    printf("Caracter: %c\n",siguienteChar());
-    printf("Caracter: %c\n",siguienteChar());
-    printf("Caracter: %c\n",siguienteChar());
-    printf("Caracter: %c\n",siguienteChar());
-
-
-
-    devolverCaracter(1);
-
-    printf("\n!!!!!1Lexema: %s\n\n", siguienteLexema());
-
-
-
-
-
-
-    //finSistemaEntrada();
-
-    /*
-    //Iniciamos sistema de entrada. 
-    //Esto es necesario para pasarle la ruta al archivo que contiene el código fuente a compilar.
+    //Iniciamos sistema de entrada
     if(iniciaSistemaEntrada(argv[1])==-1){
         exit(-1);
     }
 
     //Invocamos al analizador sintáctico
     sintactico();
-    
-    //Cerramos el archivo
+
+    printf("\n\nImpresion del arbol\n");
+    imprimirArbol();
+    destruirTablaSimbolos();
+
+    //cerramos el archivo
     return(finSistemaEntrada());
-    */
+
+
+    
+
 }

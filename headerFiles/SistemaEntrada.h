@@ -38,13 +38,17 @@ int finSistemaEntrada();
 char siguienteChar();
 
 /**
- * 
+ * @name siguienteLexema
+ * @objective: devolver el siguiente lexema del archivo, o lo que es lo mismo,
+ *             el conjunto de caracteres leídos desde la última llamada a está función
+ * @return char* lexema
  */ 
 char * siguienteLexema();
 
+/**
+ * @name devolverCaracter
+ * @objective: reintgrar un caracter en el sistema de entrada.
+ */
 void devolverCaracter(int nposiciones);
-
-//borrar está función
-void cargarBloque(int bloque);
 
 #endif	/* __SE */

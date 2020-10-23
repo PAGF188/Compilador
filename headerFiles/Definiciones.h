@@ -35,3 +35,4 @@
 #define _DOBLE_IGUAL 405  //==
 #define _MAS_IGUAL 406    //+=
 #define _DOBLE_MAS 407    //++
+#define _EOF 408   //EOF

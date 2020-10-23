@@ -19,47 +19,64 @@
 #include "./headerFiles/Lexico.h"
 #include "./headerFiles/SistemaEntrada.h"
 #include "./headerFiles/Definiciones.h"
+#include "./headerFiles/TablaSimbolos.h"
 
-//Las definiciones de las funciones públicas se encuentran en el .h
+
+/////////////////// FUNCIONES PRIVADAS
+int esCadenaAlfanumerica();
+
+///////////    Las definiciones de las funciones públicas se encuentran en el .h
 
 tipoLexico siguienteComponente(){
 
     tipoLexico tl;
-    char cadena[30]; 
-    char c;
+    int erro=0;
     int estado=0;
-    int erro=1;
-    int i = 0;
+    char c;
     
-    while(erro!=2){
-        c = siguienteChar();
-        cadena[i] = c;
-        switch (estado)
-        {
+    while(erro==0){
+        switch (estado){
+        //estado inicial
         case 0:
-            if(isalpha(c) || c=='_')  //ID
+            c = siguienteChar();
+            if (c == ' ' || c == '\t' || c=='\n')    //obiamos espacios y tabulados
+                siguienteLexema();
+            else if(isalpha(c) || c=='_')  //identificadores o palabras reservadas
                 estado = 1;
-            else if(isdigit(c))    //entero
+            else if(isdigit(c))     //números
                 estado = 2;
-            else if(c=='"')   //String
+            else if(c=='"')         //StringLiteral
                 estado = 3;
-            else if(c==EOF){
-                tl.lexema = " ";
+            else if(c==EOF){        //fin de fichero
+                tl.lexema = siguienteLexema();
+                tl.componenteLexico = _EOF;
                 return(tl);
             }
             break;
+        // detector de cadenas alfanuméricas (ejs: _asd23 iu8)
         case 1:
-            if(!isalpha(c) && c!='_'){
-                cadena[i] = ' ';
-                tl.componenteLexico = _ID;
-                tl.lexema = (char *) malloc(sizeof(cadena));
-                strcpy(tl.lexema,cadena);
+            if(esCadenaAlfanumerica()==1){
+                devolverCaracter(1);
+                tl.lexema = siguienteLexema();
+                tl.componenteLexico = insertarComponenteLexico(tl.lexema);
                 return(tl);
             }
+            break;
+        case 2:
+            break;
+        case 3:
             break;
         default:
             break;
         }
-        i++;
     }
+}
+
+
+int esCadenaAlfanumerica(){
+    char c;
+    do{
+        c = siguienteChar();
+    }while(isalpha(c) || c=='_' || isdigit(c));
+    return(1);
 }

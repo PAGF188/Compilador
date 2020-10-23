@@ -11,6 +11,7 @@
 #include <stdio.h>
 #include "./headerFiles/Sintactico.h"
 #include "./headerFiles/Lexico.h"
+#include "./headerFiles/Definiciones.h"
 
 //Las definiciones de las funciones públicas se encuentran en el .h
 
@@ -18,8 +19,8 @@ void sintactico(){
 
     tipoLexico l;
     do{
-        tipoLexico l = siguienteComponente();
+        l = siguienteComponente();
         printf("[<%d>,'%s']\n",l.componenteLexico, l.lexema);
-    }while(l.lexema!=" ");
+    }while(l.componenteLexico != _EOF);
 
 }
