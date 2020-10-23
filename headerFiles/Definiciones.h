@@ -32,7 +32,8 @@
 #define _ENTERO 403
 #define _FLOTANTE 404
 
-#define _DOBLE_IGUAL 405  //==
-#define _MAS_IGUAL 406    //+=
-#define _DOBLE_MAS 407    //++
-#define _EOF 408   //EOF
+#define _DOBLE_IGUAL 405  // ==
+#define _MAS_IGUAL 406    // +=
+#define _DOBLE_MAS 407    // ++
+#define _EOF 408   // EOF
+#define _BARRA_IGUAL 409   // /=
