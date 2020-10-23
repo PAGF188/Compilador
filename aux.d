@@ -1,8 +1,26 @@
 
 asd
-/+  /**/dasd/++/+/
+/+  /**/dasd/++/+/ bien/s  AS/=po
 b
+@
 
-a = /+ // +/ asd;
-    a = /+ "+/ sd d;
-    a = /+ /* +/ d/ 3;
+ksjd=ol
+lo==po ====
+"akjshd" "asd"asd
+
+hola "soy \"String\" "fin
+
+===>=
+
+
++
++=
+++
+
+-
+-=
+--
+
+
+<
+<=

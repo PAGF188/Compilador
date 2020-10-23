@@ -28,6 +28,9 @@
 int automataAlfanumerico();
 //autómata para comentarios. Lo ignora (recorre sus caracteres)
 int automataComentario();
+//autómata para Strings
+int automataString();
+
 ///////////    Las definiciones de las funciones públicas se encuentran en el .h
 
 tipoLexico siguienteComponente(){
@@ -44,17 +47,35 @@ tipoLexico siguienteComponente(){
         //estado inicial
         case 0:
             c = siguienteChar();
-            if (c == ' ' || c == '\t' || c=='\n')    //obviamos espacios y tabulados
+            //obviamos espacios y tabulados
+            if (c == ' ' || c == '\t' || c=='\n'){  
                 siguienteLexema();
-            else if(isalpha(c) || c=='_')  //identificadores o palabras reservadas
+                estado=0;
+            }
+            //identificadores o palabras reservadas
+            else if(isalpha(c) || c=='_')  
                 estado = 1;
-            else if(isdigit(c))     //números
+            //números
+            else if(isdigit(c))     
                 estado = 2;
-            else if(c=='"')         //StringLiteral
+            //StringLiteral
+            else if(c=='"')         
                 estado = 3;
-            //cuando entra / -> dependiendo del siguiente puede ser: comentario, división, o /=
+            //cuando entra '/' ,dependiendo del siguiente caracter, puede ser: comentario, división, o /=
             else if(c=='/')  
                 estado=4;
+            //cuando entra '=' ,dependiendo del siguiente caracter, puede ser: =, ==,  o =>
+            else if(c=='=')
+                estado=5;
+            //cuando entra '+' ,dependiendo del siguiente caracter, puede ser: +, +=,  o ++
+             else if(c=='+')
+                estado=6;
+            //cuando entra '-' ,dependiendo del siguiente caracter, puede ser: -, -=,  o --
+             else if(c=='-')
+                estado=7;
+            //cuando entra '<' ,dependiendo del siguiente caracter, puede ser: < o <=
+             else if(c=='<')
+                estado=8;
             //caracteres simples y que SOLO PUEDEN SER UN COMPONENTE LÉXICO.
             else if(c=='.' || c=='(' || c==')' || c=='[' || c==']' || 
                         c=='{' || c=='}' || c=='?' || c==',' || c==';' || c==':' || c=='$' ||
@@ -69,14 +90,15 @@ tipoLexico siguienteComponente(){
                 return(tl);
             }
             else{
+                printf("\n\nCaracter extraño\n\n");
+                exit(-1);
             }
-            
             break;
 
 
         // Estado1: detector de cadenas alfanuméricas (ejs: _asd23 iu8)
         case 1:
-            if(automataAlfanumerico()==1){
+            if(automataAlfanumerico()){
                 devolverCaracter(1);
                 tl.lexema = siguienteLexema();
                 tl.componenteLexico = insertarComponenteLexico(tl.lexema);
@@ -85,11 +107,112 @@ tipoLexico siguienteComponente(){
             break;
         case 2:
             break;
+
+        //Estado 3: StringLiteral "alsd"
         case 3:
+            if(automataString()){
+                tl.lexema = siguienteLexema();
+                tl.componenteLexico = _STRING;
+                return(tl);
+            }
             break;
+
+        //Estado 4: Discernir entre uno de los tres posibles significados de / (comentario, /=, /)
         case 4:
-            if(automataComentario()==1)  //ya recorre todos los caracteres del comentario.
+            if(automataComentario())  //ya recorre todos los caracteres del comentario ignorándolos.
                 estado=0;
+            else if(siguienteChar()=='='){     // en caso de /=
+                tl.lexema = siguienteLexema();
+                tl.componenteLexico = _BARRA_IGUAL;
+                return(tl);
+            }
+            else{   //ninguno de los anteriores -> solo queda la posibilidad de ser /
+                devolverCaracter(1); //el leido previamente que no era.
+                tl.lexema = siguienteLexema();
+                tl.componenteLexico = (int) (tl.lexema[0]);
+                return(tl);
+            }
+            break;
+
+        //Estado 5: Discernir entre uno de los tres posibles significados de = (=,==,=>)
+        case 5:
+            c = siguienteChar();
+            if(c=='='){
+                tl.lexema = siguienteLexema();
+                tl.componenteLexico = _DOBLE_IGUAL;
+                return(tl);
+
+            }
+            else if(c=='>'){
+                tl.lexema = siguienteLexema();
+                tl.componenteLexico = _IGUAL_MAYOR;
+                return(tl);
+
+            }
+            else{
+                devolverCaracter(1);  //el leido previamente que no era.
+                tl.lexema = siguienteLexema();
+                tl.componenteLexico = (int) (tl.lexema[0]);  
+                return(tl);
+            }
+            break;
+
+        //Estado 6: Discernir entre uno de los tres posibles significados de + (+,++,+=)
+        case 6:
+            c = siguienteChar();
+            if(c=='+'){
+                tl.lexema = siguienteLexema();
+                tl.componenteLexico = _DOBLE_MAS;
+                return(tl);
+            }
+            else if(c=='='){
+                tl.lexema = siguienteLexema();
+                tl.componenteLexico = _MAS_IGUAL;
+                return(tl);
+            }
+            else{
+                devolverCaracter(1);  //el leido previamente que no era.
+                tl.lexema = siguienteLexema();
+                tl.componenteLexico = (int) (tl.lexema[0]);  
+                return(tl);
+            }
+            break;
+
+        //Estado 7: Discernir entre uno de los tres posibles significados de - (-,--,-=)
+        case 7:
+            c = siguienteChar();
+            if(c=='-'){
+                tl.lexema = siguienteLexema();
+                tl.componenteLexico = _DOBLE_MENOS;
+                return(tl);
+            }
+            else if(c=='='){
+                tl.lexema = siguienteLexema();
+                tl.componenteLexico = _MENOS_IGUAL;
+                return(tl);
+            }
+            else{
+                devolverCaracter(1);  //el leido previamente que no era.
+                tl.lexema = siguienteLexema();
+                tl.componenteLexico = (int) (tl.lexema[0]);  
+                return(tl);
+            }
+            break;
+
+        //Estado 8: Discernir entre uno de los dos posibles significados de < (<, <=)
+        case 8:
+            c = siguienteChar();
+            if(c=='='){
+                tl.lexema = siguienteLexema();
+                tl.componenteLexico = _MENOR_O_IGUAL;
+                return(tl);
+            }
+            else{
+                devolverCaracter(1);  //el leido previamente que no era.
+                tl.lexema = siguienteLexema();
+                tl.componenteLexico = (int) (tl.lexema[0]);  
+                return(tl);
+            }
             break;
         default:
             break;
@@ -142,4 +265,17 @@ int automataComentario(){
         }
         return(1);
     }
+    //si no era comentario, reseteamos.
+    devolverCaracter(2);
+    return(0);
+}
+
+int automataString(){
+    char c;
+    do{
+        c=siguienteChar();
+        if(c=='\\')
+            siguienteChar();
+    }while(c!='"');
+    return(1);
 }

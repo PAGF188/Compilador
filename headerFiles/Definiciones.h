@@ -37,3 +37,7 @@
 #define _DOBLE_MAS 407    // ++
 #define _EOF 408   // EOF
 #define _BARRA_IGUAL 409   // /=
+#define _IGUAL_MAYOR 410   //  =>
+#define _DOBLE_MENOS 411   // --
+#define _MENOS_IGUAL 412   // -=
+#define _MENOR_O_IGUAL 413
