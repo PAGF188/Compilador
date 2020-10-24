@@ -30,7 +30,7 @@ int linea=1;
 int automataAlfanumerico();
 //autómata para comentarios. Lo ignora (recorre sus caracteres)
 int automataComentario();
-//autómata para Strings
+//autómata para StringLiteral
 int automataString();
 //autómata para numeros (puede ser entero o flotante).
 //1-> entero
@@ -104,8 +104,10 @@ tipoLexico siguienteComponente(){
                 return(tl);
             }
             else{
-                printf("\n\nCaracter extraño\n\n");
-                exit(-1);
+                imprimeError(6,linea);
+                //indicando error.
+                tl.componenteLexico=-1;
+                return(tl);
             }
             break;
 
@@ -240,6 +242,7 @@ tipoLexico siguienteComponente(){
             }
             break;
 
+        //Estado 9: Discernir entre uno de los dos posibles significados de * (*, *=)
         case 9:
             c = siguienteChar();
             if(c=='='){
@@ -394,6 +397,8 @@ int automataNumeros(char primero){
                     c = siguienteChar();
                     if(c=='.')
                         estado=1;
+                    //else if(c=='e' || c=='E')
+                      //  estado=5;
                 }while(isdigit(c) || c=='_');
                 if(estado!=1){
                     devolverCaracter(1);
