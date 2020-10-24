@@ -20,7 +20,9 @@
 #include "./headerFiles/SistemaEntrada.h"
 #include "./headerFiles/Definiciones.h"
 #include "./headerFiles/TablaSimbolos.h"
+#include "./headerFiles/Errores.h"
 
+int linea=1;
 
 /////////////////// FUNCIONES PRIVADAS
 
@@ -30,6 +32,10 @@ int automataAlfanumerico();
 int automataComentario();
 //autómata para Strings
 int automataString();
+//autómata para numeros (puede ser entero o flotante).
+//1-> entero
+//0-> flotante
+int automataNumeros(char primero);
 
 ///////////    Las definiciones de las funciones públicas se encuentran en el .h
 
@@ -48,14 +54,19 @@ tipoLexico siguienteComponente(){
         case 0:
             c = siguienteChar();
             //obviamos espacios y tabulados
-            if (c == ' ' || c == '\t' || c=='\n'){  
+            if (c == ' ' || c == '\t'){  
                 siguienteLexema();
                 estado=0;
+            }
+            else if(c=='\n'){
+                siguienteLexema();
+                estado=0;
+                linea++;
             }
             //identificadores o palabras reservadas
             else if(isalpha(c) || c=='_')  
                 estado = 1;
-            //números
+            //números, pueden ser enteros o flotantes
             else if(isdigit(c))     
                 estado = 2;
             //StringLiteral
@@ -105,7 +116,18 @@ tipoLexico siguienteComponente(){
                 return(tl);
             }
             break;
+        
+        //Estado 2: Discernir entre uno de los dos posibles significados de un dígito (entero, flotante)
         case 2:
+            if(automataNumeros(c)==1){
+                tl.lexema = siguienteLexema();
+                tl.componenteLexico = _ENTERO;
+                return(tl);
+            }else{
+                tl.lexema = siguienteLexema();
+                tl.componenteLexico = _FLOTANTE;
+                return(tl);
+            }
             break;
 
         //Estado 3: StringLiteral "alsd"
@@ -278,4 +300,91 @@ int automataString(){
             siguienteChar();
     }while(c!='"');
     return(1);
+}
+
+int automataNumeros(char primero){
+    int estado=0;
+    char c = siguienteChar();
+    int fin=0;
+    int tipo=1; //1 entero, 0 flotante.
+    int noHuboYaUnMasOMenos = 0;
+
+    while(fin==0){
+        switch (estado){
+            //primer caracter leído.
+            case 0:
+                if(c=='.')        //flotante básico de inicio
+                    estado=1;
+                else if(primero=='0' && (c=='b' || c=='B'))   //entero binario (no existe binario flotante)
+                    estado=2;
+                else if(primero == '0' && (c=='x' || c=='X'))   //hexadecimal (discernir entre flotante o binario)
+                    estado=3;
+                else if(isdigit(c))   //entero normal o flotante
+                    estado=4;
+                else{
+                    imprimeError(6,linea);
+                    return(-1);
+                }
+                break;
+
+            //Estado1: flotante no hexadecimal
+            case 1:
+                do{
+                    c = siguienteChar();
+                    if(c=='e' || c=='E'){
+                        estado=5;
+                    }
+                }while(isdigit(c) || c=='_');
+                if(estado!=5){
+                    devolverCaracter(1);
+                    return(0);
+                }
+                break;
+
+            //Estado2: entero binario
+            case 2:
+                do{
+                    c = siguienteChar();
+                }while(c=='0' || c=='1' || c=='_');
+                devolverCaracter(1);
+                return(1);
+
+            //Estado3: Discernir entre hexadecimal entero o flotante (no incluido notación científica con p)
+            case 3:
+                do{
+                    c = siguienteChar();
+                    if(c=='.' && tipo==1){
+                        c = siguienteChar();
+                        tipo=0;
+                    }
+                }while(isdigit(c) || c=='a' || c=='A' || c=='b' || c=='B' || c=='c' || c=='C' || c=='d' || c=='D' ||
+                            c=='e' || c=='E' || c=='f' || c=='F' || c=='_');
+                devolverCaracter(1);
+                return(tipo);
+            
+            //Estado4: entero normal o flotante no . inicial
+            case 4:
+                do{
+                    c = siguienteChar();
+                    if(c=='.')
+                        estado=1;
+                }while(isdigit(c) || c=='_');
+                if(estado!=1){
+                    devolverCaracter(1);
+                    return(1);
+                }
+                break;
+
+            //Estado5: valor después de exponente, notación ciéntifica.
+            case 5:
+                do{
+                    c = siguienteChar();
+                }while(isdigit(c) || c=='_' || c=='+' || c=='-');
+                devolverCaracter(1);
+                return(1);
+                
+            default:
+                break;
+        }
+    }
 }

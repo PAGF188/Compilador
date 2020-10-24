@@ -19,8 +19,10 @@
  *                (*) 2 -> no se pudo acceder al archivo a compilar. 
  *                (*) 3 -> no se pudo cerrar el archivo de compilación al acabar.
  *                (*) 4 -> tamaño de lexema superior al máximo permitido.
+ *                (*) 5-> falta exponente
+ * @param linea del error.
  */
-void imprimeError(int codigo);
+void imprimeError(int codigo, int linea);
 
 
 #endif	/* __ERRORES */

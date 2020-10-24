@@ -73,7 +73,7 @@ int iniciaSistemaEntrada(char* archivo){
     //Lo intentamos abrir en modo lectura.
     ptr = fopen(archivo,"r");
     if(ptr==NULL){
-        imprimeError(2);
+        imprimeError(2,-1);
         return(-1);
     }
     //Cargamos el 1 bloque
@@ -108,7 +108,7 @@ char siguienteChar(){
     t_lexema++;
     //Una vez incrementado fin, nunca debería coincidir con inicio
     if(t_lexema==MAX){
-        imprimeError(4);
+        imprimeError(4,-1);
         exit(-1);
     }
     return(c);
@@ -160,7 +160,7 @@ int finSistemaEntrada(){
     //Si el archivo está abierto lo intentamos cerrar.
     if(ptr!=NULL){
         if(fclose(ptr)!=0){
-            imprimeError(3);
+            imprimeError(3,-1);
             return(-1);
         }
     }

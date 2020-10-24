@@ -13,7 +13,7 @@
 
 //Las definiciones de las funciones públicas se encuentran en el .h
 
-void imprimeError(int codigo){
+void imprimeError(int codigo, int linea){
 
     switch (codigo)
     {
@@ -27,7 +27,13 @@ void imprimeError(int codigo){
         printf("\n\nEntry System error! : El archivo no se pudo cerrar.\n\n");
         break;
     case 4:
-        printf("\n\nLexical Error! : El tamaño del lexema excede al máximo permitido.\n\n");
+        printf("\n\n(linea %d) Lexical Error! : El tamaño del lexema excede al máximo permitido.\n\n", linea);
+        break;
+    case 5:
+        printf("\n\n(linea %d) Lexical Error! : Falta exponente.\n\n",linea);
+        break;
+    case 6:
+        printf("\n\n(linea %d) Lexical Error! : Caracter extraño.\n\n",linea);
         break;
     default:
         break;
