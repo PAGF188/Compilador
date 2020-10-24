@@ -307,7 +307,7 @@ int automataNumeros(char primero){
     char c = siguienteChar();
     int fin=0;
     int tipo=1; //1 entero, 0 flotante.
-    int noHuboYaUnMasOMenos = 0;
+    int vecesMASoMENOS = 0;
 
     while(fin==0){
         switch (estado){
@@ -321,6 +321,10 @@ int automataNumeros(char primero){
                     estado=3;
                 else if(isdigit(c))   //entero normal o flotante
                     estado=4;
+                else if(!isdigit(c)){
+                    devolverCaracter(1);
+                    return(1);
+                }
                 else{
                     imprimeError(6,linea);
                     return(-1);
@@ -377,11 +381,20 @@ int automataNumeros(char primero){
 
             //Estado5: valor después de exponente, notación ciéntifica.
             case 5:
+                c = siguienteChar();
+                if(!isdigit(c) && c!='+' && c!='-'){
+                    imprimeError(5,linea);
+                    return(-1);
+                }
+                devolverCaracter(1);
                 do{
                     c = siguienteChar();
-                }while(isdigit(c) || c=='_' || c=='+' || c=='-');
+                    if(c=='+' || c=='-'){
+                        vecesMASoMENOS++;
+                    }
+                }while(isdigit(c) || c=='_' || ((c=='+' || c=='-') && vecesMASoMENOS<2));
                 devolverCaracter(1);
-                return(1);
+                return(0);
                 
             default:
                 break;
