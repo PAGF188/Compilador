@@ -339,6 +339,10 @@ int automataNumeros(char primero){
                     estado=3;
                 else if(isdigit(c))   //entero normal o flotante
                     estado=4;
+                else if(c=='_'){
+                    c = siguienteChar();
+                    break;
+                }       
                 else if(!isdigit(c)){
                     devolverCaracter(1);
                     return(1);
