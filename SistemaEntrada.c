@@ -50,6 +50,7 @@ void limpiar(int bloque);
 
 //Función de depuración.
 void imprimeBloque(int b){
+    printf("Bloque %d: ", b);
     for(int i=0;i<MAX;i++){
         if(b==1){
             if(bloque1[i]==EOF)
@@ -111,6 +112,7 @@ char siguienteChar(){
         imprimeError(4,-1);
         exit(-1);
     }
+    //printf("\n\n!!!Caracter: %c\n\n", c);
     return(c);
 }
 

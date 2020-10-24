@@ -87,6 +87,9 @@ tipoLexico siguienteComponente(){
             //cuando entra '<' ,dependiendo del siguiente caracter, puede ser: < o <=
              else if(c=='<')
                 estado=8;
+            //cuando entra '*' ,dependiendo del siguiente caracter, puede ser: * o *=
+             else if(c=='*')
+                estado=9;
             //caracteres simples y que SOLO PUEDEN SER UN COMPONENTE LÉXICO.
             else if(c=='.' || c=='(' || c==')' || c=='[' || c==']' || 
                         c=='{' || c=='}' || c=='?' || c==',' || c==';' || c==':' || c=='$' ||
@@ -227,6 +230,21 @@ tipoLexico siguienteComponente(){
             if(c=='='){
                 tl.lexema = siguienteLexema();
                 tl.componenteLexico = _MENOR_O_IGUAL;
+                return(tl);
+            }
+            else{
+                devolverCaracter(1);  //el leido previamente que no era.
+                tl.lexema = siguienteLexema();
+                tl.componenteLexico = (int) (tl.lexema[0]);  
+                return(tl);
+            }
+            break;
+
+        case 9:
+            c = siguienteChar();
+            if(c=='='){
+                tl.lexema = siguienteLexema();
+                tl.componenteLexico = _POR_IGUAL;
                 return(tl);
             }
             else{

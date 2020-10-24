@@ -40,4 +40,5 @@
 #define _IGUAL_MAYOR 410   //  =>
 #define _DOBLE_MENOS 411   // --
 #define _MENOS_IGUAL 412   // -=
-#define _MENOR_O_IGUAL 413
+#define _MENOR_O_IGUAL 413 //<=
+#define _POR_IGUAL 414     //*=
