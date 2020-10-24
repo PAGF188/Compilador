@@ -87,22 +87,22 @@ char siguienteChar(){
     //estamos en bloque 2
     if(fin>=MAX){
         c = bloque2[fin-MAX];
-        if(fin==2*MAX-1 && puedo_b2){
+        if(fin==2*MAX-1 && puedo_b1){
             cargarBloque(1);
             fin=0;
         }else{
-            puedo_b2=1;
+            puedo_b1=1;
             fin++;
         }
     }
     //estamos en bloque 1
     else{
         c = bloque1[fin];
-        if(fin==MAX-1 && puedo_b1){
+        if(fin==MAX-1 && puedo_b2){
             cargarBloque(2);
             fin=MAX;
         }else{
-            puedo_b1=1;
+            puedo_b2=1;
             fin++;
         }
     }
@@ -112,7 +112,7 @@ char siguienteChar(){
         imprimeError(4,-1);
         exit(-1);
     }
-    //printf("\n\n!!!Caracter: %c\n\n", c);
+    //printf("\n!!!Caracter: %c  Fin: %ld\n", c,fin);
     return(c);
 }
 
@@ -150,7 +150,7 @@ void devolverCaracter(int nposiciones){
         puedo_b1=0;
     }
 
-    if(aux>=MAX && fin <MAX){
+    if(aux==MAX && fin <MAX){
         //volvimos al bloque1
         //no volver a cargar bloque2
         puedo_b2=0;
