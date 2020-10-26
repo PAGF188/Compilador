@@ -7,8 +7,7 @@
  * Versión: 1.0
  * Descripción: Exporta la parte pública de Lexico.c.
  * Objetivos:
- *       - Exportar las funciones del analizador léxico que necesitarán invocar
- *         el resto de partes del compilador.
+ *       - Devolver el siguiente componente léxico (+ lexema) al analizador sintáctico.
  *       - Exportar el tipo de datos que encapsula componente léxico + lexema.
  */
 
@@ -23,7 +22,7 @@ typedef struct {
 /**
  * @name siguienteComponente()
  * @objective: Obtiene el siguiente componente léxico del codigo a analizar y lo
- *             devuelve junto con el lexema. 
+ *             devuelve junto con su lexema. 
  */
 tipoLexico siguienteComponente();
 

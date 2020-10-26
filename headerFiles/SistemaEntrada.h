@@ -17,7 +17,7 @@
  * @objective: Función para iniciar el sistema de entrada. 
  *             Comprueba que existe el archivo.
  *             Crea el puntero al archivo. 
- *             Crea las variables necesarias para el centinela.
+ *             Crea el entorno propicio para el centinela.
  * @param archivo, ruta al archivo a compilar.
  * @return int, código de error (-1 fallo en el inicio)
  */ 
@@ -40,14 +40,15 @@ char siguienteChar();
 /**
  * @name siguienteLexema
  * @objective: devolver el siguiente lexema del archivo, o lo que es lo mismo,
- *             el conjunto de caracteres leídos desde la última llamada a está función
+ *             el conjunto de caracteres leídos desde la última llamada a está función. Visto de otra forma
+ *             devolver el conjunto de caracteres entre los punteros inicio y fin.
  * @return char* lexema
  */ 
 char * siguienteLexema();
 
 /**
  * @name devolverCaracter
- * @objective: reintgrar un caracter en el sistema de entrada.
+ * @objective: devolver un caracter en el sistema de entrada.
  */
 void devolverCaracter(int nposiciones);
 

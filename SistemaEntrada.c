@@ -16,31 +16,32 @@
 #include "./headerFiles/SistemaEntrada.h"
 #include "./headerFiles/Errores.h"
 
-//Nota: Cambiar también el nº de char leídos por fscanf!!!!!!!
-//Nota2: Si fin supera a inicio al pedir caracteres->error tama lexema demasiado grande
-#define MAX 64
+#define MAX 64  //NOTA: AL CAMBIAR ESTE VALOR CAMBIAR TAMBIÉN Nº CHAR EN FSCANF()
+
 
 //Variables globales.
 FILE *ptr;  //fichero
 char bloque1[MAX];
 char bloque2[MAX];
 
-//punteros centinela. Toman valores de 0 a 2*MAX-1
+// Punteros centinela. Toman valores de 0 a 2*MAX-1
 long inicio=0;   
 long fin=0;
-//para saber tam del lexema
+// Para saber tam del lexema y devolver error de tam excesivo cuando iguala a MAX.
 int t_lexema=0;
 
-//para saber si he devuelto un caracter y no tengo que cargar bloque2
+// Al devolver un caracter, para detectar el caso en el que retrocedo de bloque. Lo que implicaría 
+// no volver a cargarlo. 
 int puedo_b1 = 1;
 int puedo_b2 = 1;
+
 
 ////////// FUNCIONES PRIVADAS
 
 //Si bloque es 1, carga MAX-1 caracteres en bloque1.
 //Si bloque es 2, carga MAX-1 caracteres en bloque2.
-//En ambos casos soloca EOF al final de los bloques
 void cargarBloque(int bloque);
+
 // Recorre el bloque indicado por int bloque, y coloca todos su caracteres a EOF.
 // La única manera de devolver un EOF, es si fscanf deja posiciones sin sobreescribir ->
 // no hay más caracteres en el archivo -> fin.
@@ -48,7 +49,7 @@ void cargarBloque(int bloque);
 //primera iteracción de lectura.
 void limpiar(int bloque);
 
-//Función de depuración.
+//Función de depuración. Obviar
 void imprimeBloque(int b){
     printf("Bloque %d: ", b);
     for(int i=0;i<MAX;i++){
@@ -107,7 +108,8 @@ char siguienteChar(){
         }
     }
     t_lexema++;
-    //Una vez incrementado fin, nunca debería coincidir con inicio
+    // Si el tamaño del lexema es demasiado grande (recordar que está limitado por el tamaño del bloque)
+    // devolver error
     if(t_lexema==MAX){
         imprimeError(4,-1);
         exit(-1);

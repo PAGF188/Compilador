@@ -10,8 +10,8 @@
 
 /**
  * @name sintactico
- * @objective: Pedirle componentes léxicos al analizador lexico. Imprimir cada
- *           componente lexico obtenido (junto con el lexema).
+ * @objective: - Pedir componentes léxicos al analizador lexico. 
+ *             - Imprimir cada componente lexico obtenido (junto con el lexema).
  */
 void sintactico();
 

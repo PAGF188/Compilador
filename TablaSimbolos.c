@@ -86,6 +86,7 @@ void destruirTablaSimbolos() {
 }
 
 int insertarPalabraReservada(tipoelem E){
+    //Si no está activado el campo de palabra reservada
     // o lexema es nulo o palabra reservada ya insertada -> error.
     if(E.lexema==NULL || es_miembro_clave(tablaSimbolos,E.lexema)){
         return(-1);
@@ -105,7 +106,6 @@ int insertarComponenteLexico(char* lexema){
     //si no está es un identificador -> lo insertamos y devolvemos id asignado.
     else{
         tipoelem aux;
-        aux.esPalabraReservada=0;
         aux.lexema = lexema; 
         aux.componenteLexico = _ID;
         insertar(&tablaSimbolos,aux);

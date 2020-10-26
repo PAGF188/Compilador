@@ -32,16 +32,16 @@ int main(int argc, char *argv[])
     crearTablaSimbolos();
 
     //Insertamos las palabras reservadas
-    tipoelem _import = {"import",_IMPORT, 1};
-    tipoelem _double = {"double",_DOUBLE, 1};
-    tipoelem _int = {"int",_INT, 1};
-    tipoelem _while = {"while",_WHILE, 1};
-    tipoelem _foreach = {"foreach",_FOREACH, 1};
-    tipoelem _return = {"return",_RETURN, 1};
-    tipoelem _void = {"void",_VOID, 1};
-    tipoelem _main = {"main",_MAIN, 1};
-    tipoelem _cast = {"cast",_CAST, 1};
-    tipoelem _writefln = {"writefln", _WRITEFLN,1};
+    tipoelem _import = {"import",_IMPORT};
+    tipoelem _double = {"double",_DOUBLE};
+    tipoelem _int = {"int",_INT};
+    tipoelem _while = {"while",_WHILE};
+    tipoelem _foreach = {"foreach",_FOREACH};
+    tipoelem _return = {"return",_RETURN};
+    tipoelem _void = {"void",_VOID};
+    tipoelem _main = {"main",_MAIN};
+    tipoelem _cast = {"cast",_CAST};
+    tipoelem _writefln = {"writefln", _WRITEFLN};
 
     //Nota: no gestionamos el error porque sabemos que no se va a producir
     //(hemos introducido los datos coherentemente).
@@ -62,13 +62,12 @@ int main(int argc, char *argv[])
         exit(-1);
     }
 
-    
-
     //Invocamos al analizador sintáctico
     sintactico();
 
     printf("\n\nImpresion del arbol\n");
     imprimirArbol();
+    
     destruirTablaSimbolos();
 
     //cerramos el archivo

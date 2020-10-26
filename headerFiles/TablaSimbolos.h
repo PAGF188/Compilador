@@ -35,7 +35,6 @@
 typedef struct {
     char* lexema;
     int componenteLexico;
-    int esPalabraReservada;   //se puede quitar
 }tipoelem;
 
 
