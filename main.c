@@ -34,8 +34,8 @@ int main(int argc, char *argv[])
     //Insertamos palabras reservadas
     //Para facilitar la insercción de palabras reservadas al inicio:
     char * palabrasReservadas[9] = {"import", "double","int",
-                                     "while", "foreach", "return", "void", "main", "cast"};
-    int id[9] = {_IMPORT,_DOUBLE,_INT, _WHILE, _FOREACH, _RETURN, _VOID, _MAIN, _CAST};
+                                     "while", "foreach", "return", "void", "cast"};
+    int id[9] = {_IMPORT,_DOUBLE,_INT, _WHILE, _FOREACH, _RETURN, _VOID,  _CAST};
     
     for(int i=0; i<sizeof(id)/sizeof(id[0]); i++){
         tipoelem aux;

@@ -16,7 +16,7 @@
 #include "./headerFiles/SistemaEntrada.h"
 #include "./headerFiles/Errores.h"
 
-#define MAX 64  //NOTA: AL CAMBIAR ESTE VALOR CAMBIAR TAMBIÉN Nº CHAR EN FSCANF()
+#define MAX 64
 
 
 //Variables globales.
@@ -184,14 +184,14 @@ void cargarBloque(int bloque){
         if(bloque==1){
             limpiar(1);
             //Leemos MAX-1 caracteres
-            fscanf(ptr, "%64c", bloque1);
-            //fgets(bloque1, MAX, ptr);
+            //fscanf(ptr, "%31c", bloque1);
+            fread(bloque1,1,MAX,ptr);
         }
         else{
             limpiar(2);
             //Leemos MAX-1 caracteres
-            fscanf(ptr, "%64c", bloque2);
-            //fgets(bloque2, MAX, ptr);
+            //fscanf(ptr, "%31c", bloque2);
+            fread(bloque2,1,MAX,ptr);
         }
     }
 }

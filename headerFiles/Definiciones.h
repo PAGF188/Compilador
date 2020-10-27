@@ -25,7 +25,6 @@
 #define _FOREACH 304
 #define _RETURN 305
 #define _VOID 306
-#define _MAIN 307
 #define _CAST 308
 
 //Otros componentes léxicos (no están todos los del lenguaje solo los necesarios para analizar el código de referencia)
