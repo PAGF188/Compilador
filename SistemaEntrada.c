@@ -35,6 +35,9 @@ int t_lexema=0;
 int puedo_b1 = 1;
 int puedo_b2 = 1;
 
+//saber línea en la que estamos
+int lineas=0;
+
 
 ////////// FUNCIONES PRIVADAS
 
@@ -111,10 +114,13 @@ char siguienteChar(){
     // Si el tamaño del lexema es demasiado grande (recordar que está limitado por el tamaño del bloque)
     // devolver error
     if(t_lexema==MAX){
-        imprimeError(4,-1);
-        exit(-1);
+        imprimeError(4,lineas);
+        //exit(-1);
     }
     //printf("\n!!!Caracter: %c  Fin: %ld\n", c,fin);
+    if(c=='\n'){
+        lineas++;
+    }
     return(c);
 }
 

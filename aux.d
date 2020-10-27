@@ -21,13 +21,14 @@ hola "soy \"String\" "fin
 -=
 --
 
+/^
 
 <
 <=
 
-/^
 
- denom += ((xval-x_bar)(xval-x_bar));
+
+den^om += ((xval-x_bar)(xval-x_bar));
 
 (y[whilectr] - y_bar);
         whilectr++;
