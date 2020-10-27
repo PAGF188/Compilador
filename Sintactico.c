@@ -20,7 +20,7 @@ void sintactico(){
     tipoLexico l;
     do{
         l = siguienteComponente();
-        printf("[<%d>,'%s']\n",l.componenteLexico, l.lexema);
+        printf("[<%d>, '%s']\n",l.componenteLexico, l.lexema);
     }while(l.componenteLexico != _EOF);
 
 }

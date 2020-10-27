@@ -35,6 +35,7 @@ int automataString();
 //autómata para numeros (puede ser entero o flotante).
 //1-> entero
 //0-> flotante
+//-1 -> error
 int automataNumeros(char primero);
 
 ///////////    Las definiciones de las funciones públicas se encuentran en el .h
@@ -45,6 +46,7 @@ tipoLexico siguienteComponente(){
     int erro=0;
     int estado=0;
     char c;
+    int aux;
     
     while(erro==0){
         switch (estado){
@@ -104,10 +106,11 @@ tipoLexico siguienteComponente(){
                 return(tl);
             }
             else{
+                erro=1;
                 imprimeError(6,linea);
                 //indicando error.
                 tl.componenteLexico=-1;
-                return(tl);
+                tl.lexema = siguienteLexema();
             }
             break;
 
@@ -124,11 +127,12 @@ tipoLexico siguienteComponente(){
         
         //Estado 2: Discernir entre uno de los dos posibles significados de un dígito (entero, flotante)
         case 2:
-            if(automataNumeros(c)==1){
+            aux = automataNumeros(c);
+            if(aux==1){
                 tl.lexema = siguienteLexema();
                 tl.componenteLexico = _ENTERO;
                 return(tl);
-            }else{
+            }else if(aux==0){
                 tl.lexema = siguienteLexema();
                 tl.componenteLexico = _FLOTANTE;
                 return(tl);
@@ -261,6 +265,9 @@ tipoLexico siguienteComponente(){
             break;
         }
     }
+    //nunca debería llegar aquí. En caso de que lo haga es por un error de caracter extraño.
+    //Devolvemos tl con componente léxico -1.
+    return(tl);
 }
 
 
@@ -346,13 +353,15 @@ int automataNumeros(char primero){
                     c = siguienteChar();
                     break;
                 }       
+                else if(c=='e' || c=='E'){
+                    estado=5;
+                }
                 else if(!isdigit(c)){
                     devolverCaracter(1);
                     return(1);
                 }
                 else{
-                    imprimeError(6,linea);
-                    return(-1);
+                    fin=1;
                 }
                 break;
 
@@ -397,10 +406,11 @@ int automataNumeros(char primero){
                     c = siguienteChar();
                     if(c=='.')
                         estado=1;
-                    //else if(c=='e' || c=='E')
-                      //  estado=5;
+                    else if(c=='e' || c=='E'){
+                        estado=5;
+                    }
                 }while(isdigit(c) || c=='_');
-                if(estado!=1){
+                if(estado!=1 && estado!=5){
                     devolverCaracter(1);
                     return(1);
                 }
@@ -427,4 +437,6 @@ int automataNumeros(char primero){
                 break;
         }
     }
+
+    return(-1);
 }

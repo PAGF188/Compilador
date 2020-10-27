@@ -31,31 +31,19 @@ int main(int argc, char *argv[])
     //Iniciamos la tabla de símbolos
     crearTablaSimbolos();
 
-    //Insertamos las palabras reservadas
-    tipoelem _import = {"import",_IMPORT};
-    tipoelem _double = {"double",_DOUBLE};
-    tipoelem _int = {"int",_INT};
-    tipoelem _while = {"while",_WHILE};
-    tipoelem _foreach = {"foreach",_FOREACH};
-    tipoelem _return = {"return",_RETURN};
-    tipoelem _void = {"void",_VOID};
-    tipoelem _main = {"main",_MAIN};
-    tipoelem _cast = {"cast",_CAST};
-    tipoelem _writefln = {"writefln", _WRITEFLN};
+    //Insertamos palabras reservadas
+    //Para facilitar la insercción de palabras reservadas al inicio:
+    char * palabrasReservadas[9] = {"import", "double","int",
+                                     "while", "foreach", "return", "void", "main", "cast"};
+    int id[9] = {_IMPORT,_DOUBLE,_INT, _WHILE, _FOREACH, _RETURN, _VOID, _MAIN, _CAST};
+    
+    for(int i=0; i<sizeof(id)/sizeof(id[0]); i++){
+        tipoelem aux;
+        aux.lexema = palabrasReservadas[i];
+        aux.componenteLexico = id[i];
+        insertarPalabraReservada(aux);
+    }
 
-    //Nota: no gestionamos el error porque sabemos que no se va a producir
-    //(hemos introducido los datos coherentemente).
-    insertarPalabraReservada(_import);
-    insertarPalabraReservada(_double);
-    insertarPalabraReservada(_int);
-    insertarPalabraReservada(_while);
-    insertarPalabraReservada(_foreach);
-    insertarPalabraReservada(_return);
-    insertarPalabraReservada(_void);
-    insertarPalabraReservada(_main);
-    insertarPalabraReservada(_cast);
-    insertarPalabraReservada(_writefln);
-    insertarPalabraReservada(_writefln);
 
     //Iniciamos sistema de entrada
     if(iniciaSistemaEntrada(argv[1])==-1){
@@ -63,9 +51,10 @@ int main(int argc, char *argv[])
     }
 
     //Invocamos al analizador sintáctico
+    printf("Nota: Las comillas que limitan el lexema no forman parte del mismo.\n");
     sintactico();
 
-    printf("\n\nImpresion del arbol\n");
+    printf("\n\nImpresion de la Tabla de Símbolos\n");
     imprimirArbol();
     
     destruirTablaSimbolos();

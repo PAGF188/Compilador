@@ -1,3 +1,6 @@
+
+#ifndef __DEFINICIONES
+#define __DEFINICIONES
 /**
  * Autor: Pablo García Fernández.
  * Archivo: Definiciones.h
@@ -24,7 +27,6 @@
 #define _VOID 306
 #define _MAIN 307
 #define _CAST 308
-#define _WRITEFLN 309
 
 //Otros componentes léxicos (no están todos los del lenguaje solo los necesarios para analizar el código de referencia)
 #define _ID 400
@@ -43,3 +45,6 @@
 #define _MENOS_IGUAL 412    // -=
 #define _MENOR_O_IGUAL 413  //<=
 #define _POR_IGUAL 414      //*=
+
+
+#endif	/* __DEFINICIONES */

@@ -25,6 +25,8 @@ hola "soy \"String\" "fin
 <
 <=
 
+/^
+
  denom += ((xval-x_bar)(xval-x_bar));
 
 (y[whilectr] - y_bar);
@@ -36,7 +38,7 @@ nueva linea
 
 234.3, 123.3120, 2.o123, 23.8e78, 2e23, 2e+231, 123.98e-345, 2.2323e+123
 
-2213.34e34e5
+22^13.34e34e5
 123.2e+34+5
 12.5E-13
 123E+
