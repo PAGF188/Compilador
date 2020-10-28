@@ -22,7 +22,6 @@ void sintactico(){
     do{
         l = siguienteComponente();
         printf("[<%d>, '%s']\n",l.componenteLexico, l.lexema);
-        free(l.lexema);
     }while(l.componenteLexico != _EOF);
 
 }

@@ -59,7 +59,7 @@ void buscar_nodo(abb A, tipoclave cl, tipoelem *nodo);
 // eliminar el arbol y limpia la memoria.
 void destruir_arbol(abb *A);
 //Las dos siguientes permiten eliminar un nodo concreto del árbol.
-//Sin embargo, esn esta práctica no se usan. Quedan hechas por si se necesitan en la siguiente.
+//Sin embargo, en esta práctica no se usan. Quedan hechas por si se necesitan en la siguiente.
 void suprimir(abb *A, tipoelem E);
 tipoelem _suprimir_min(abb *A);
 
@@ -200,6 +200,10 @@ void destruir_arbol(abb *A) {
 		*A = NULL;
 	}
 }
+
+
+//Las dos siguientes permiten eliminar un nodo concreto del árbol.
+//Sin embargo, en esta práctica no se usan. Quedan hechas por si se necesitan en la siguiente.
 
 void suprimir(abb *A, tipoelem E) {
     abb aux;

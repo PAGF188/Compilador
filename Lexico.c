@@ -113,7 +113,6 @@ tipoLexico siguienteComponente(){
             }
             break;
 
-
         // Estado1: detector de cadenas alfanuméricas (ejs: _asd23 iu8)
         case 1:
             if(automataAlfanumerico()){

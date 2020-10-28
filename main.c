@@ -50,7 +50,6 @@ int main(int argc, char *argv[])
     }
 
     //Invocamos al analizador sintáctico
-    printf("Nota: Las comillas que limitan el lexema no forman parte del mismo.\n");
     sintactico();
 
     /*printf("\n\nImpresion de la Tabla de Símbolos\n");

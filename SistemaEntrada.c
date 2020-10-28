@@ -17,6 +17,7 @@
 #include "./headerFiles/SistemaEntrada.h"
 #include "./headerFiles/Errores.h"
 
+//Define el tamaño de los bloques.
 #define MAX 64
 
 
@@ -47,7 +48,7 @@ int lineas=0;
 void cargarBloque(int bloque);
 
 
-//Función de depuración. Obviar
+//Función de depuración. OBVIAR
 void imprimeBloque(int b){
     printf("Bloque %d: ", b);
     for(int i=0;i<MAX;i++){
@@ -86,6 +87,8 @@ char siguienteChar(){
     //estamos en bloque 2
     if(fin>=MAX){
         c = bloque2[fin-MAX];
+        // si estamos en la última posición y no hemos retrocedido de bloque 
+        // (al ejecutar devolverCaracter), cargamos el siguiente bloque.
         if(fin==2*MAX-1 && puedo_b1){
             cargarBloque(1);
             fin=0;
@@ -97,6 +100,8 @@ char siguienteChar(){
     //estamos en bloque 1
     else{
         c = bloque1[fin];
+        // si estamos en la última posición y no hemos retrocedido de bloque 
+        // (al ejecutar devolverCaracter), cargamos el siguiente bloque.
         if(fin==MAX-1 && puedo_b2){
             cargarBloque(2);
             fin=MAX;
@@ -124,6 +129,8 @@ char * siguienteLexema(){
         char * lexema;
         lexema = (char *) malloc(t_lexema+1);
         int i=0;
+        // vamos moviendo inicio hasta que alcance fin y almacenando lso caracteres leidos
+        // en lexema.
         while (inicio!=fin){
             if(inicio>=MAX){
                 lexema[i] = bloque2[inicio-MAX];
@@ -177,19 +184,19 @@ int finSistemaEntrada(){
 void cargarBloque(int bloque){
     if(ptr!=NULL){
         if(bloque==1){
-            //Leemos MAX-1 caracteres
-            //fscanf(ptr, "%31c", bloque1);
             int leidos;
             leidos = fread(bloque1,1,MAX,ptr);
+            // Si leemos menos de MAX caracteres, hemos llegado al final de archivo,
+            // insertamos EOF al final para que pueda ser devuelto al léxico.
             if(leidos<MAX){
                 bloque1[leidos] = EOF;
             }
         }
         else{
-            //Leemos MAX-1 caracteres
-            //fscanf(ptr, "%31c", bloque2);
             int leidos;
             leidos = fread(bloque2,1,MAX,ptr);
+            // si leemos menos de MAX caracteres, hemos llegado al final de archivo,
+            // insertamos EOF al final para que pueda ser devuelto al léxico.
             if(leidos<MAX){
                 bloque2[leidos] = EOF;
             }
