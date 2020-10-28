@@ -2,7 +2,6 @@
 #define __ERRORES
 
 /**
- * Autor: Pablo García Fernández.
  * Archivo: Errores.h
  * Versión: 1.0
  * Descripción: Exporta la parte pública de Errores.c.

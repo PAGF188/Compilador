@@ -1,5 +1,4 @@
 /**
- * Autor: Pablo García Fernández.
  * Archivo: main.c
  * Versión: 1.0
  * Descripción: Archivo principal del proyecto compilador. Actúa a modo de disparador.
@@ -27,15 +26,15 @@ int main(int argc, char *argv[])
         imprimeError(1,-1);
         return(-1);
     }
-
+    
     //Iniciamos la tabla de símbolos
     crearTablaSimbolos();
 
     //Insertamos palabras reservadas
     //Para facilitar la insercción de palabras reservadas al inicio:
-    char * palabrasReservadas[9] = {"import", "double","int",
+    char * palabrasReservadas[8] = {"import", "double","int",
                                      "while", "foreach", "return", "void", "cast"};
-    int id[9] = {_IMPORT,_DOUBLE,_INT, _WHILE, _FOREACH, _RETURN, _VOID,  _CAST};
+    int id[8] = {_IMPORT,_DOUBLE,_INT, _WHILE, _FOREACH, _RETURN, _VOID,  _CAST};
     
     for(int i=0; i<sizeof(id)/sizeof(id[0]); i++){
         tipoelem aux;
@@ -54,8 +53,8 @@ int main(int argc, char *argv[])
     printf("Nota: Las comillas que limitan el lexema no forman parte del mismo.\n");
     sintactico();
 
-    printf("\n\nImpresion de la Tabla de Símbolos\n");
-    imprimirArbol();
+    /*printf("\n\nImpresion de la Tabla de Símbolos\n");
+    imprimirArbol();*/
     
     destruirTablaSimbolos();
 

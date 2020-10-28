@@ -1,5 +1,4 @@
 /**
- * Autor: Pablo García Fernández.
  * Archivo: SistemaEntrada.c
  * Versión: 1.0
  * Descripción: Implementa el sistema de entrada del compilador.
@@ -8,8 +7,10 @@
  *       - Devolver el siguiente lexema.
  */
 
-//Nota: No exactamente método del doble centinela. No se incluye EOF, 
-//pero aún así solo se realiza una única comparación.
+/**
+ * Nota: No es exactamente el método del doble centinela. No se incluye EOF al final de un bloque, 
+ * pero aún así no se pierden suns ventajas pués solo se realiza una única comparación.
+ */
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -45,12 +46,6 @@ int lineas=0;
 //Si bloque es 2, carga MAX-1 caracteres en bloque2.
 void cargarBloque(int bloque);
 
-// Recorre el bloque indicado por int bloque, y coloca todos su caracteres a EOF.
-// La única manera de devolver un EOF, es si fscanf deja posiciones sin sobreescribir ->
-// no hay más caracteres en el archivo -> fin.
-// Si justo coincide en última posición de bloque, se cargaría uno ínutil. Pero se devovlería EOF en la 
-//primera iteracción de lectura.
-void limpiar(int bloque);
 
 //Función de depuración. Obviar
 void imprimeBloque(int b){
@@ -182,27 +177,22 @@ int finSistemaEntrada(){
 void cargarBloque(int bloque){
     if(ptr!=NULL){
         if(bloque==1){
-            limpiar(1);
             //Leemos MAX-1 caracteres
             //fscanf(ptr, "%31c", bloque1);
-            fread(bloque1,1,MAX,ptr);
+            int leidos;
+            leidos = fread(bloque1,1,MAX,ptr);
+            if(leidos<MAX){
+                bloque1[leidos] = EOF;
+            }
         }
         else{
-            limpiar(2);
             //Leemos MAX-1 caracteres
             //fscanf(ptr, "%31c", bloque2);
-            fread(bloque2,1,MAX,ptr);
-        }
-    }
-}
-
-void limpiar(int bloque){
-    for(int i=0;i<MAX;i++){
-        if(bloque==1){
-            bloque1[i] = EOF;
-        }
-        else{
-            bloque2[i] = EOF;
+            int leidos;
+            leidos = fread(bloque2,1,MAX,ptr);
+            if(leidos<MAX){
+                bloque2[leidos] = EOF;
+            }
         }
     }
 }

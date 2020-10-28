@@ -2,7 +2,6 @@
 #define __LEXICO
 
 /**
- * Autor: Pablo García Fernández.
  * Archivo: Lexico.h
  * Versión: 1.0
  * Descripción: Exporta la parte pública de Lexico.c.

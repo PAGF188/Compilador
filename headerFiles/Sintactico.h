@@ -1,5 +1,4 @@
 /**
- * Autor: Pablo García Fernández.
  * Archivo: Sintactico.h
  * Versión: 1.0
  * Descripción: Exporta la parte pública de Sintactico.c.

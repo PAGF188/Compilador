@@ -1,5 +1,4 @@
 /**
- * Autor: Pablo García Fernández.
  * Archivo: Errores.c
  * Versión: 1.0
  * Descripción: Centraliza la gestión de errores por parte del compilador

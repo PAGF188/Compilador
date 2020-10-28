@@ -2,7 +2,6 @@
 #ifndef __DEFINICIONES
 #define __DEFINICIONES
 /**
- * Autor: Pablo García Fernández.
  * Archivo: Definiciones.h
  * Versión: 1.0
  * Descripción: Define un valor entero para cada uno de los componentes léxicos.

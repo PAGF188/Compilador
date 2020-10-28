@@ -1,7 +1,6 @@
 #ifndef __TABLA_S
 #define __TABLA_S
 /**
- * Autor: Pablo García Fernández.
  * Archivo: TablaSimbolos.h
  * Versión: 1.0
  * Descripción: Exporta la parte pública de TablaSimbolos.c.
@@ -47,7 +46,7 @@ void crearTablaSimbolos();
 /**
  * @name insertarPalabraReservada.
  * @objective: introducir en la tabla de símbolos las palabras reservadas del lenguaje.
- * @param E, lexema + componente léxico + true (1) espalabraReservada.
+ * @param E, lexema + componente léxico espalabraReservada.
  * @return int. -1 fallo al insertar la palabra (ej, palabra ya insertada).
  */
 int insertarPalabraReservada(tipoelem E);
@@ -73,6 +72,6 @@ int insertarComponenteLexico(char* lexema);
 void destruirTablaSimbolos();
 
 //borrar
-void imprimirArbol();
+//void imprimirArbol();
 
 #endif	/* __TABLA_S */

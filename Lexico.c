@@ -1,5 +1,4 @@
 /**
- * Autor: Pablo García Fernández.
  * Archivo: Lexico.c
  * Versión: 1.0
  * Descripción: Implementa enl analizador léxico del compilador.

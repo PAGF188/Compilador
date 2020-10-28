@@ -1,5 +1,4 @@
 /**
- * Autor: Pablo García Fernández.
  * Archivo: TablaSimbolos.c
  * Versión: 1.0
  * Descripción: Implementa la tabla de símbolos del compilador.

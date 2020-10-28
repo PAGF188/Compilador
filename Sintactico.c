@@ -1,5 +1,4 @@
 /**
- * Autor: Pablo García Fernández.
  * Archivo: Sintactico.c
  * Versión: 1.0
  * Descripción: Implementa el analizador sintáctico del compilador.
@@ -9,9 +8,11 @@
  */
 
 #include <stdio.h>
+#include <stdlib.h>
 #include "./headerFiles/Sintactico.h"
 #include "./headerFiles/Lexico.h"
 #include "./headerFiles/Definiciones.h"
+
 
 //Las definiciones de las funciones públicas se encuentran en el .h
 
@@ -21,6 +22,7 @@ void sintactico(){
     do{
         l = siguienteComponente();
         printf("[<%d>, '%s']\n",l.componenteLexico, l.lexema);
+        free(l.lexema);
     }while(l.componenteLexico != _EOF);
 
 }

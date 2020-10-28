@@ -2,7 +2,6 @@
 #define __SE
 
 /**
- * Autor: Pablo García Fernández.
  * Archivo: SistemaEntrada.h
  * Versión: 1.0
  * Descripción: Exporta la parte pública de SistemaEntrada.c.
@@ -17,7 +16,7 @@
  * @objective: Función para iniciar el sistema de entrada. 
  *             Comprueba que existe el archivo.
  *             Crea el puntero al archivo. 
- *             Crea el entorno propicio para el centinela.
+ *             Crea el entorno propicio para el doble buffer.
  * @param archivo, ruta al archivo a compilar.
  * @return int, código de error (-1 fallo en el inicio)
  */ 
@@ -48,7 +47,7 @@ char * siguienteLexema();
 
 /**
  * @name devolverCaracter
- * @objective: devolver un caracter en el sistema de entrada.
+ * @objective: devolver un caracter al sistema de entrada.
  */
 void devolverCaracter(int nposiciones);
 
